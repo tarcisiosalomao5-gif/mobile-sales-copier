@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-claude.jpg";
+import luciferLogo from "@/assets/lucifer-logo.png";
 import {
   Calendar,
   Clock,
