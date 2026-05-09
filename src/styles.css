@@ -428,8 +428,8 @@
     margin: 0 auto 14px auto !important;
   }
   .hero-headline em {
-    font-style: normal;
-    color: var(--blood) !important;
+    font-style: italic;
+    color: var(--ember) !important;
   }
 
   /* Lead combinado mobile */
