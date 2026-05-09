@@ -32,7 +32,7 @@ export const Route = createFileRoute("/")({
 });
 
 const ctaBtn =
-  "inline-flex w-full items-center justify-center rounded-md bg-[var(--cta)] px-6 py-4 text-base font-extrabold tracking-wide text-[var(--cta-foreground)] shadow-lg shadow-black/10 transition-transform active:scale-[0.98]";
+  "inline-flex w-full items-center justify-center rounded-md bg-[var(--cta)] px-5 py-4 text-base font-extrabold tracking-wide text-[var(--cta-foreground)] shadow-lg shadow-black/10 transition-transform active:scale-[0.98]";
 
 function HighlightOrange({ children }: { children: React.ReactNode }) {
   return (
@@ -85,18 +85,18 @@ function Index() {
           alt="Missão Claude Code"
           width={1024}
           height={1024}
-          className="mx-auto block h-[38vh] w-full object-cover object-top"
+          className="mx-auto block h-[30vh] min-h-[205px] max-h-[245px] w-full object-cover object-top"
         />
       </section>
 
-      <section className="px-5 pt-8 text-center">
-        <div className="flex items-center justify-center gap-2 text-2xl font-black tracking-tight">
-          <Sparkles className="h-7 w-7 text-primary" />
+      <section className="px-5 pt-4 text-center">
+        <div className="flex items-center justify-center gap-2 text-[2rem] font-black leading-none tracking-tight">
+          <Sparkles className="h-9 w-9 text-primary" />
           <span>Claude</span>
         </div>
-        <p className="-mt-1 text-xs font-bold tracking-[0.4em]">CODE</p>
+        <p className="-mt-0.5 text-xs font-bold tracking-[0.38em] text-primary">CODE</p>
 
-        <div className="mx-auto mt-6 flex max-w-sm items-center justify-center gap-4 rounded-md border border-border bg-card px-4 py-3 text-sm font-semibold">
+        <div className="mx-auto mt-4 flex max-w-sm items-center justify-center gap-3 rounded-md border border-border bg-card px-3 py-3 text-sm font-semibold">
           <span className="inline-flex items-center gap-1.5">
             <Calendar className="h-4 w-4 text-primary" /> Sábado, 16 de Maio
           </span>
@@ -106,13 +106,13 @@ function Index() {
           </span>
         </div>
 
-        <h1 className="mx-auto mt-6 max-w-sm text-2xl font-extrabold leading-tight">
+        <h1 className="mx-auto mt-4 max-w-sm text-[1.58rem] font-extrabold leading-[1.22]">
           1 Dia para implementar Claude Code e{" "}
           <em className="not-italic text-primary">Construir Times de I.A</em>{" "}
           que trabalham por você!
         </h1>
 
-        <p className="mx-auto mt-5 max-w-sm text-sm leading-relaxed">
+        <p className="mx-auto mt-4 max-w-sm text-[1rem] leading-snug">
           <HighlightOrange>
             Aprenda ao vivo e online, como criar squads
           </HighlightOrange>{" "}
@@ -120,7 +120,7 @@ function Index() {
           liberam o seu tempo, independente do seu nicho ou área de atuação.
         </p>
 
-        <div className="mx-auto mt-6 max-w-sm">
+        <div className="mx-auto mt-4 max-w-sm">
           <a href="#inscricao" className={ctaBtn}>
             QUERO GARANTIR MINHA VAGA
           </a>
