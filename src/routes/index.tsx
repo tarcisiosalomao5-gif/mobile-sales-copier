@@ -1,19 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-lucifer.png";
 import luciferLogo from "@/assets/lucifer-logo.png";
+import luciferLogoDark from "@/assets/lucifer-logo-dark.png";
+import blocoQuerubins from "@/assets/bloco-querubins.png";
+import blocoDemonios from "@/assets/bloco-demonios.png";
+import blocoLucifer from "@/assets/bloco-lucifer.png";
+import blocoTronos from "@/assets/bloco-tronos.png";
+import blocoSerafins from "@/assets/bloco-serafins.png";
 import {
   Calendar,
   Clock,
   Check,
   X,
-  Sparkles,
-  Users,
-  Crown,
-  Flame,
-  BookOpen,
-  Swords,
-  ScrollText,
-  Eye,
   HelpCircle,
 } from "lucide-react";
 import { useState } from "react";
@@ -119,11 +117,11 @@ function Index() {
         {/* 2. Date box */}
         <div className="hero-date-box mx-auto flex max-w-sm items-center justify-center gap-3 rounded-md border border-border bg-card px-[14px] py-[10px] text-[13px] font-semibold md:my-5 md:px-[18px] md:py-4 md:text-sm">
           <span className="inline-flex items-center gap-1.5">
-            <Calendar className="h-4 w-4 text-primary" /> 2 noites ao vivo
+            <Calendar className="h-4 w-4 text-primary" /> 26 e 27 de Maio
           </span>
           <span className="text-muted-foreground">|</span>
           <span className="inline-flex items-center gap-1.5">
-            <Clock className="h-4 w-4 text-primary" /> 20h às 22h
+            <Clock className="h-4 w-4 text-primary" /> 20h às 22h30
           </span>
         </div>
 
@@ -298,38 +296,47 @@ function Index() {
             {
               n: "Bloco 01 / Hierarquia",
               t: "Anjos, querubins, serafins e tronos.",
-              icon: Crown,
+              img: blocoQuerubins,
+              alt: "Querubim com quatro faces — hierarquia angelical",
               d: "Antes da queda, vc precisa entender o céu. Quem é anjo, quem é querubim, quem é serafim, quem é trono. Como a Bíblia descreve cada um. E pq isso muda TUDO o que vc pensa que sabe.",
               refs: "Is 6 · Ez 1 · Ap 4–5",
             },
             {
               n: "Bloco 02 / Reino das trevas",
               t: "Principados, potestades, dominações.",
-              icon: Eye,
+              img: blocoDemonios,
+              alt: "Reino das trevas — principados e potestades",
               d: "O que tá escrito sobre a estrutura do mal e como ela opera AGORA. Sem ficção, sem decreto vazio, sem espetáculo. O texto bíblico, lido como ele é.",
               refs: "Ef 6 · Cl 2 · Dn 10",
             },
             {
               n: "Bloco 03 / A queda",
               t: "Quem Lúcifer era. Como ele caiu.",
-              icon: Flame,
+              img: blocoLucifer,
+              alt: "A queda de Lúcifer — anjo caindo no abismo",
               d: "Aqui é o coração da imersão. Quem Lúcifer era. Como ele caiu. Por que ele caiu. Isaías 14, Ezequiel 28, Apocalipse 12 versículo por versículo. A história escondida que quase ninguém te conta.",
               refs: "Is 14 · Ez 28 · Ap 12",
             },
             {
               n: "Bloco 04 / Guerra espiritual",
               t: "A guerra que continua até hoje.",
-              icon: Swords,
+              img: blocoTronos,
+              alt: "Guerra espiritual — tronos celestiais",
               d: "A queda de Lúcifer não acabou em Lúcifer. A guerra continua. E ela tá acontecendo na sua vida AGORA. A armadura de Deus, a oração, a Palavra. Como agir biblicamente. Sem fórmula mágica, sem decreto vazio.",
               refs: "Ef 6 · Tg 4 · 1Pe 5",
             },
-          ].map(({ n, t, d, icon: Icon, refs }) => (
+          ].map(({ n, t, d, img, alt, refs }) => (
             <div
               key={n}
               className="rounded-2xl border border-primary/30 bg-black/30 p-5"
             >
-              <div className="flex h-28 items-center justify-center rounded-xl bg-gradient-to-br from-primary/20 to-transparent">
-                <Icon className="h-14 w-14 text-primary" strokeWidth={1.2} />
+              <div className="flex h-44 items-center justify-center rounded-xl bg-gradient-to-br from-primary/10 to-transparent overflow-hidden">
+                <img
+                  src={img}
+                  alt={alt}
+                  className="h-40 w-auto object-contain"
+                  style={{ filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.4))" }}
+                />
               </div>
               <p className="mt-4 text-xs font-bold italic tracking-wider text-primary">
                 {n}
@@ -371,19 +378,23 @@ function Index() {
           </p>
           <div className="mx-auto mt-8 grid max-w-xs grid-cols-2 gap-4">
             {[
-              { l: "Querubins", r: "Ez 1 · Gn 3", i: Crown },
-              { l: "Serafins", r: "Is 6", i: Flame },
-              { l: "Tronos", r: "Cl 1", i: Sparkles },
-              { l: "Principados", r: "Ef 6 · Cl 2", i: Eye },
-              { l: "Lúcifer", r: "Is 14 · Ez 28", i: Swords },
-              { l: "Demônios", r: "Mc 5 · Mt 12", i: ScrollText },
-            ].map(({ l, r, i: Icon }) => (
+              { l: "Querubins", r: "Ez 1 · Gn 3", img: blocoQuerubins, alt: "Querubins" },
+              { l: "Serafins", r: "Is 6", img: blocoSerafins, alt: "Serafins" },
+              { l: "Tronos", r: "Cl 1", img: blocoTronos, alt: "Tronos" },
+              { l: "Principados", r: "Ef 6 · Cl 2", img: blocoDemonios, alt: "Principados" },
+              { l: "Lúcifer", r: "Is 14 · Ez 28", img: blocoLucifer, alt: "Lúcifer" },
+              { l: "Demônios", r: "Mc 5 · Mt 12", img: blocoDemonios, alt: "Demônios" },
+            ].map(({ l, r, img, alt }) => (
               <div
                 key={l}
                 className="rounded-2xl border border-primary/30 bg-gradient-to-b from-primary/15 to-transparent p-5 text-center"
               >
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/20">
-                  <Icon className="h-6 w-6 text-primary" />
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-black/30 overflow-hidden">
+                  <img
+                    src={img}
+                    alt={alt}
+                    className="h-14 w-14 object-contain"
+                  />
                 </div>
                 <div className="mx-auto my-3 h-0.5 w-6 bg-primary" />
                 <p className="text-sm font-extrabold">{l}</p>
@@ -515,7 +526,7 @@ function Index() {
         <div className="text-center">
           <header className="offer-brand mb-7 px-5 text-center">
             <img
-              src={luciferLogo}
+              src={luciferLogoDark}
               alt="A Queda de Lúcifer — Imersão Bíblica"
               className="brand-logo offer-logo mx-auto mb-6 block h-auto w-full max-w-[320px] md:max-w-[420px]"
               style={{ background: "transparent" }}
@@ -528,11 +539,11 @@ function Index() {
 
           <ul className="mx-auto mt-6 max-w-xs space-y-3 text-left text-sm font-bold italic">
             {[
-              "1 Dia de imersão prática ao vivo",
-              "Diagnóstico, Criação, Orquestração e Multiplicação",
-              "Implementação guiada",
-              "Q&A em tempo real durante o evento",
-              "Acesso ao grupo exclusivo de participantes",
+              "2 noites de imersão bíblica ao vivo (26 e 27 de Maio · 20h às 22h30)",
+              "A queda de Lúcifer versículo por versículo (Is 14 · Ez 28 · Ap 12)",
+              "O mundo espiritual: anjos, querubins, serafins, tronos, principados",
+              "Tira-dúvidas ao vivo nas duas noites",
+              "Acesso à gravação por 7 dias após o evento",
             ].map((t) => (
               <li key={t} className="flex items-start gap-3">
                 <span className="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center bg-primary">
@@ -545,10 +556,10 @@ function Index() {
 
           <div className="mx-auto mt-8 rounded-2xl border border-primary/30 bg-black/40 p-6">
             <p className="text-sm font-semibold text-white/90">
-              DE <s className="text-white/60 decoration-primary">R$497</s> POR APENAS
+              DE <s className="text-white/60 decoration-primary">R$97</s> POR APENAS
             </p>
             <p className="mt-3 text-7xl font-black italic text-primary">
-              <span className="align-top text-3xl">R$</span>37
+              <span className="align-top text-3xl">R$</span>19<span className="text-3xl">,90</span>
             </p>
             <div className="mx-auto mt-6 max-w-sm">
               <a href="#inscricao" className={ctaBtn}>
@@ -598,11 +609,11 @@ function Index() {
         <div className="mt-8 rounded-2xl border-2 border-primary/40 bg-card p-6">
           <div className="flex items-start justify-between gap-4">
             <div>
-              <h3 className="text-2xl font-black italic text-primary">
-                TIAGO LEMOS
+              <h3 className="mentor-name text-2xl font-black italic text-primary">
+                TARCÍSIO SALOMÃO
               </h3>
               <span className="mt-2 inline-block bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">
-                @tiagolemosx
+                @tarcisio
               </span>
             </div>
             <div className="h-20 w-20 flex-shrink-0 rounded-full border-2 border-primary/40 bg-muted" />
@@ -610,24 +621,22 @@ function Index() {
           <hr className="my-5 border-border" />
           <div className="space-y-4 text-sm leading-relaxed">
             <p>
-              Tiago Lemos é fundador do Mestres da IA, o ecossistema completo
-              de treinamentos e ferramentas de inteligência artificial no
-              Brasil, com mais de 7.000 alunos formados.
+              Tarcísio Salomão é criador de conteúdo bíblico com mais de 2 milhões
+              de seguidores entre Instagram e TikTok. Construiu uma das maiores
+              audiências cristãs do Brasil ensinando o que tá escrito,
+              sem espiritualismo barato.
             </p>
             <p>
-              Criador do Ruptura, o método de criação de conteúdo audiovisual
-              com IA mais avançado do mercado nacional, e do PromptX, a
-              plataforma de prompts profissionais para criadores e
-              profissionais digitais.
+              Já criou o Manual Bíblico de Salomão, o PCR (apologética cristã)
+              e o Curso de Jejum, com milhares de cristãos formados na Palavra.
             </p>
             <p>
-              Tiago não ensina teoria. Ele ensina o que usa na própria
-              operação, e o Claude Code é hoje parte central de como ele
-              trabalha, cria e escala.
+              O método é direto: Bíblia na mão, versículo por versículo,
+              sem opinião disfarçada de revelação. Tarcísio não ensina o que ele
+              acha. Ensina o que tá escrito.
             </p>
-            <p className="font-bold text-primary">
-              "Eu só ensino o que roda na minha operação. Tudo que você vai
-              aprender nessa imersão está ativo hoje no meu negócio."
+            <p className="mentor-quote font-bold text-primary">
+              "Eu não te ensino o que eu acho. Eu te ensino o que está escrito."
             </p>
           </div>
         </div>
@@ -650,10 +659,10 @@ function Index() {
 
         <div className="mx-auto mt-6 flex max-w-md flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-md border border-border bg-card px-4 py-3 text-xs font-bold tracking-wide">
           <span className="inline-flex items-center gap-1.5">
-            <Calendar className="h-4 w-4 text-primary" /> SÁBADO, 16 DE MAIO
+            <Calendar className="h-4 w-4 text-primary" /> 26 E 27 DE MAIO
           </span>
           <span className="inline-flex items-center gap-1.5">
-            <Clock className="h-4 w-4 text-primary" /> 09H ÀS 17H
+            <Clock className="h-4 w-4 text-primary" /> 20H ÀS 22H30
           </span>
           <span className="inline-flex items-center gap-1.5">
             <span className="h-2 w-2 rounded-full bg-primary" /> ONLINE
@@ -670,23 +679,23 @@ function Faq() {
   const items = [
     {
       q: "O evento é ao vivo ou gravado?",
-      a: "O evento é 100% ao vivo. Ao finalizar sua inscrição, você terá a opção de adquirir o acesso à gravação.",
+      a: "100% ao vivo, nas duas noites (26 e 27 de Maio, 20h às 22h30). Após o evento, você terá acesso à gravação por 7 dias.",
     },
     {
-      q: "Não tenho experiência técnica. Vou conseguir implementar?",
-      a: "Sim. A imersão foi desenhada para qualquer pessoa, sem precisar escrever código.",
+      q: "Preciso ter conhecimento prévio da Bíblia?",
+      a: "Não. A imersão foi pensada pra qualquer pessoa, do iniciante ao estudioso. A gente lê e explica versículo por versículo. Você só precisa estar com a Bíblia na mão.",
     },
     {
-      q: "Preciso criar conta no Claude Code antes?",
-      a: "Não é obrigatório. Vamos te orientar passo a passo no dia.",
+      q: "Como vou assistir?",
+      a: "O acesso é 100% online, ao vivo. Você recebe o link de acesso por e-mail logo após confirmar a inscrição.",
     },
     {
-      q: "Funciona para qualquer nicho?",
-      a: "Sim. O método de orquestração de agentes se aplica a qualquer área de atuação.",
+      q: "Qual tradução da Bíblia devo usar?",
+      a: "Qualquer tradução fiel funciona (ARA, ACF, NVI, NAA). O importante é estar com ela na mão pra acompanhar versículo por versículo.",
     },
     {
       q: "Tem garantia?",
-      a: "Sim, 7 dias de garantia incondicional. Se não fizer sentido, devolvemos 100% do valor.",
+      a: "Sim, 7 dias de garantia incondicional. Se a imersão não fizer sentido pra você, devolvemos 100% do valor. Risco zero.",
     },
   ];
   const [open, setOpen] = useState<number | null>(0);
