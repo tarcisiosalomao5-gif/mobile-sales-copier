@@ -86,8 +86,8 @@ function Index() {
             alt="Missão Claude Code"
             width={1024}
             height={1024}
-            className="mx-auto block h-[70vh] min-h-[580px] w-full object-cover object-top md:h-[80vh]"
-            style={{ objectPosition: "50% 20%" }}
+            className="mx-auto block h-[42vh] min-h-[320px] max-h-[380px] w-full object-cover object-top md:h-[80vh] md:min-h-[580px] md:max-h-none"
+            style={{ objectPosition: "50% 18%" }}
           />
           {/* fade pra cream */}
           <div
@@ -103,11 +103,11 @@ function Index() {
       <section className="hero-copy relative z-0 px-5 text-center">
         {/* 1. Logo sobreposto */}
         <div
-          className="brand relative z-10 mx-auto -mt-[90px] md:-mt-[110px]"
+          className="brand relative z-10 mx-auto -mt-[50px] py-3 md:-mt-[110px] md:py-6"
           style={{ position: "relative" }}
         >
-          <div className="flex items-center justify-center gap-2 text-[2rem] font-black leading-none tracking-tight">
-            <Sparkles className="h-9 w-9 text-primary" />
+          <div className="flex items-center justify-center gap-2 text-[1.75rem] font-black leading-none tracking-tight md:text-[2rem]">
+            <Sparkles className="h-10 w-10 text-primary md:h-12 md:w-12" />
             <span>Claude</span>
           </div>
           <p className="-mt-0.5 text-xs font-bold tracking-[0.38em] text-primary">
@@ -116,7 +116,7 @@ function Index() {
         </div>
 
         {/* 2. Date box */}
-        <div className="mx-auto mt-5 flex max-w-sm items-center justify-center gap-3 rounded-md border border-border bg-card px-3 py-3 text-sm font-semibold">
+        <div className="mx-auto my-[10px] flex max-w-sm items-center justify-center gap-3 rounded-md border border-border bg-card px-[14px] py-[10px] text-[13px] font-semibold md:my-5 md:px-[18px] md:py-4 md:text-sm">
           <span className="inline-flex items-center gap-1.5">
             <Calendar className="h-4 w-4 text-primary" /> Sábado, 16 de Maio
           </span>
@@ -127,35 +127,38 @@ function Index() {
         </div>
 
         {/* 3. Headline */}
-        <h1 className="mx-auto mt-5 max-w-sm text-[1.58rem] font-extrabold leading-[1.22]">
+        <h1 className="mx-auto mb-3 max-w-sm text-[24px] font-extrabold leading-[1.15] md:mb-6 md:mt-5 md:text-[1.875rem] md:leading-[1.22]">
           1 Dia para implementar Claude Code e{" "}
           <em className="not-italic text-primary">Construir Times de I.A</em>{" "}
           que trabalham por você!
         </h1>
 
         {/* 4. Tag laranja */}
-        <div className="mt-[18px]">
-          <span className="inline-block bg-primary px-3 py-1 text-xs font-bold tracking-wide text-primary-foreground">
+        <div className="mb-[10px] md:mb-0 md:mt-[18px]">
+          <span className="inline-block bg-primary px-[14px] py-[7px] text-[13px] font-bold tracking-wide text-primary-foreground md:px-[18px] md:py-[10px]">
             Aprenda ao vivo · sem enrolação
           </span>
         </div>
 
         {/* 5. Parágrafo */}
-        <p className="mx-auto mt-[14px] max-w-sm text-[1rem] leading-snug">
+        <p className="mx-auto mb-[18px] max-w-sm text-[14px] leading-[1.5] md:mb-0 md:mt-[14px] md:text-[15.5px] md:leading-snug">
           Crie squads de agentes autônomos que executam tarefas, substituem
           ferramentas e liberam o seu tempo, independente do seu nicho ou área
           de atuação.
         </p>
 
         {/* 6. Botão */}
-        <div className="mx-auto mt-[28px] max-w-sm">
-          <a href="#inscricao" className={ctaBtn}>
+        <div className="mx-auto max-w-sm md:mt-[28px]">
+          <a
+            href="#inscricao"
+            className="inline-flex w-full items-center justify-center rounded-md bg-[var(--cta)] px-[22px] py-4 text-[15px] font-extrabold tracking-wide text-[var(--cta-foreground)] shadow-lg shadow-black/10 transition-transform active:scale-[0.98] md:px-[22px] md:py-6 md:text-base"
+          >
             QUERO GARANTIR MINHA VAGA
           </a>
         </div>
 
         {/* 7. Checks */}
-        <ul className="mx-auto mt-[32px] max-w-sm space-y-2 text-left text-sm font-bold">
+        <ul className="mx-auto mt-[20px] max-w-sm space-y-[5px] rounded-xl p-[18px] text-left text-[14px] font-bold md:mt-[32px] md:space-y-2 md:p-[26px] md:text-sm">
           {[
             "Ao vivo e online",
             "Acesso à gravação",
