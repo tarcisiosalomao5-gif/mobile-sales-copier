@@ -2,6 +2,8 @@
 @source "../src";
 @import "tw-animate-css";
 
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=EB+Garamond:ital,wght@1,400;1,600&family=Manrope:wght@400;500;600;700;800;900&display=swap");
+
 @custom-variant dark (&:is(.dark *));
 
 /*
@@ -63,29 +65,47 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(0.965 0.018 70);
-  --foreground: oklch(0.18 0.02 30);
-  --card: oklch(0.98 0.012 70);
-  --card-foreground: oklch(0.18 0.02 30);
-  --popover: oklch(0.98 0.012 70);
-  --popover-foreground: oklch(0.18 0.02 30);
-  --primary: oklch(0.7 0.18 40);
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.94 0.03 60);
-  --secondary-foreground: oklch(0.18 0.02 30);
-  --muted: oklch(0.94 0.03 60);
-  --muted-foreground: oklch(0.45 0.03 40);
-  --accent: oklch(0.7 0.18 40);
-  --accent-foreground: oklch(0.99 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.85 0.05 50);
-  --input: oklch(0.85 0.05 50);
-  --ring: oklch(0.7 0.18 40);
-  --dark-section: oklch(0.18 0.025 30);
-  --dark-section-foreground: oklch(0.98 0.012 70);
-  --cta: oklch(0.85 0.22 145);
-  --cta-foreground: oklch(0.18 0.02 30);
+
+  /* Caravaggio palette */
+  --paper: #F0E6D2;
+  --paper-2: #E3D4B3;
+  --smoke: #2A1F1A;
+  --smoke-2: #3D2D24;
+  --ember: #B8956A;
+  --ember-soft: #D4B58A;
+  --ember-deep: #8A6F45;
+  --blood: #6B2818;
+  --blood-soft: #8B3A2A;
+  --flame: #C2691F;
+  --ink: #1A1410;
+  --green: #A3E635;
+  --green-2: #84CC16;
+
+  /* Semantic mappings */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--paper-2);
+  --card-foreground: var(--ink);
+  --popover: var(--paper-2);
+  --popover-foreground: var(--ink);
+  --primary: var(--ember);
+  --primary-foreground: var(--ink);
+  --secondary: var(--paper-2);
+  --secondary-foreground: var(--ink);
+  --muted: var(--paper-2);
+  --muted-foreground: #6b5a48;
+  --accent: var(--ember);
+  --accent-foreground: var(--ink);
+  --destructive: var(--blood);
+  --destructive-foreground: var(--paper);
+  --border: rgba(138, 111, 69, 0.35);
+  --input: rgba(138, 111, 69, 0.35);
+  --ring: var(--ember);
+  --dark-section: var(--smoke);
+  --dark-section-foreground: var(--paper);
+  --cta: var(--green);
+  --cta-foreground: var(--ink);
+
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -144,6 +164,23 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: "Manrope", system-ui, sans-serif;
+  }
+
+  .brand-title,
+  .sec-h2,
+  .warranty-h,
+  .mentor-name {
+    font-family: "Cinzel", serif;
+    letter-spacing: 0.02em;
+  }
+
+  .quote,
+  .mentor-quote,
+  .bloco-refs,
+  .termo-ref {
+    font-family: "EB Garamond", serif;
+    font-style: italic;
   }
 }
 

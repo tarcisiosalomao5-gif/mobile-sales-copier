@@ -7,13 +7,12 @@ import {
   X,
   Sparkles,
   Users,
-  Cloud,
-  Code2,
-  MessageSquare,
-  Bot,
-  Search,
-  Brain,
-  Network,
+  Crown,
+  Flame,
+  BookOpen,
+  Swords,
+  ScrollText,
+  Eye,
   HelpCircle,
 } from "lucide-react";
 import { useState } from "react";
@@ -23,11 +22,11 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Missão Claude Code — 1 Dia para construir Times de I.A" },
+      { title: "Imersão A Queda de Lúcifer — 2 noites de estudo bíblico ao vivo" },
       {
         name: "description",
         content:
-          "Aprenda ao vivo, em 1 sábado, a montar squads de agentes autônomos com Claude Code que executam tarefas e liberam o seu tempo.",
+          "2 noites comigo, ao vivo, com a Bíblia na mão. A história da queda de Lúcifer versículo por versículo, do jeito que está escrito.",
       },
     ],
   }),
@@ -45,9 +44,9 @@ function HighlightOrange({ children }: { children: React.ReactNode }) {
 }
 
 function MarqueeBar() {
-  const item = "MISSÃO CLAUDE CODE";
+  const item = "IMERSÃO • A QUEDA DE LÚCIFER";
   return (
-    <div className="overflow-hidden bg-primary py-3 text-primary-foreground">
+    <div className="overflow-hidden py-3 text-white" style={{ background: "var(--flame)" }}>
       <div className="flex animate-[marquee_18s_linear_infinite] whitespace-nowrap">
         {Array.from({ length: 8 }).map((_, i) => (
           <span
@@ -64,12 +63,15 @@ function MarqueeBar() {
 
 function StickyVagas() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 bg-primary px-4 py-2 text-primary-foreground md:px-[18px] md:py-3">
+    <div
+      className="fixed inset-x-0 bottom-0 z-50 px-4 py-2 text-white md:px-[18px] md:py-3"
+      style={{ background: "var(--blood)" }}
+    >
       <p className="text-center text-[11px] font-bold tracking-wide md:text-xs">
         VAGAS DESTE LOTE JÁ VENDIDAS:
       </p>
       <div className="mt-1 h-2.5 w-full overflow-hidden rounded-full bg-white/40 md:h-3">
-        <div className="flex h-full w-[87%] items-center justify-end rounded-full bg-[var(--dark-section)] pr-2">
+        <div className="flex h-full w-[87%] items-center justify-end rounded-full bg-black/70 pr-2">
           <span className="text-[10px] font-bold italic text-white">87%</span>
         </div>
       </div>
@@ -108,45 +110,47 @@ function Index() {
           className="brand relative z-10 mx-auto -mt-[50px] py-3 md:-mt-[110px] md:py-6"
           style={{ position: "relative" }}
         >
-          <div className="flex items-center justify-center gap-2 text-[1.75rem] font-black leading-none tracking-tight md:text-[2rem]">
-            <Sparkles className="h-10 w-10 text-primary md:h-12 md:w-12" />
-            <span>Claude</span>
+          <div className="brand-title flex items-center justify-center gap-2 text-[1.75rem] font-black leading-none tracking-tight md:text-[2rem]" style={{ color: "var(--blood)" }}>
+            <Flame className="h-9 w-9 md:h-11 md:w-11" style={{ color: "var(--blood)" }} />
+            <span>LÚCIFER</span>
           </div>
-          <p className="-mt-0.5 text-xs font-bold tracking-[0.38em] text-primary">
-            CODE
+          <p className="mt-1 text-[10px] font-bold tracking-[0.38em]" style={{ color: "var(--ember-deep)" }}>
+            A QUEDA · IMERSÃO BÍBLICA
           </p>
         </div>
 
         {/* 2. Date box */}
         <div className="mx-auto my-[10px] flex max-w-sm items-center justify-center gap-3 rounded-md border border-border bg-card px-[14px] py-[10px] text-[13px] font-semibold md:my-5 md:px-[18px] md:py-4 md:text-sm">
           <span className="inline-flex items-center gap-1.5">
-            <Calendar className="h-4 w-4 text-primary" /> Sábado, 16 de Maio
+            <Calendar className="h-4 w-4 text-primary" /> 2 noites ao vivo
           </span>
           <span className="text-muted-foreground">|</span>
           <span className="inline-flex items-center gap-1.5">
-            <Clock className="h-4 w-4 text-primary" /> 09h às 17h
+            <Clock className="h-4 w-4 text-primary" /> 20h às 22h
           </span>
         </div>
 
         {/* 3. Headline */}
-        <h1 className="mx-auto mb-3 max-w-sm text-[24px] font-extrabold leading-[1.15] md:mb-6 md:mt-5 md:text-[1.875rem] md:leading-[1.22]">
-          1 Dia para implementar Claude Code e{" "}
-          <em className="not-italic text-primary">Construir Times de I.A</em>{" "}
-          que trabalham por você!
+        <h1 className="sec-h2 mx-auto mb-3 max-w-sm text-[22px] font-extrabold leading-[1.18] md:mb-6 md:mt-5 md:text-[1.875rem] md:leading-[1.22]">
+          Em 2 noites vc vai descobrir a história sobre{" "}
+          <em className="not-italic" style={{ color: "var(--blood)" }}>a queda de Lúcifer</em>{" "}
+          que quase ninguém sabe direito. Ela tá toda na Bíblia, mas por que vc nunca ouviu?
         </h1>
 
         {/* 4. Tag laranja */}
         <div className="mb-[10px] md:mb-0 md:mt-[18px]">
-          <span className="inline-block bg-primary px-[14px] py-[7px] text-[13px] font-bold tracking-wide text-primary-foreground md:px-[18px] md:py-[10px]">
-            Aprenda ao vivo · sem enrolação
+          <span className="inline-block px-[14px] py-[7px] text-[13px] font-bold tracking-wide text-white md:px-[18px] md:py-[10px]" style={{ background: "var(--flame)" }}>
+            2 noites de estudo bíblico ao vivo
           </span>
         </div>
 
         {/* 5. Parágrafo */}
         <p className="mx-auto mb-[18px] max-w-sm text-[14px] leading-[1.5] md:mb-0 md:mt-[14px] md:text-[15.5px] md:leading-snug">
-          Crie squads de agentes autônomos que executam tarefas, substituem
-          ferramentas e liberam o seu tempo, independente do seu nicho ou área
-          de atuação.
+          2 noites comigo, ao vivo, com a Bíblia na mão. Eu vou te contar a história
+          da queda de Lúcifer versículo por versículo. E pra vc entender mesmo, vou
+          te ensinar o mundo espiritual de um jeito que vc nunca ouviu antes. Anjo,
+          querubim, serafim, trono, principado. Tudo o que tá escrito sobre o mundo
+          invisível. Sem invenção. Só Bíblia.
         </p>
 
         {/* 6. Botão */}
@@ -162,9 +166,9 @@ function Index() {
         {/* 7. Checks */}
         <ul className="mx-auto mt-[20px] max-w-sm space-y-[5px] rounded-xl p-[18px] text-left text-[14px] font-bold md:mt-[32px] md:space-y-2 md:p-[26px] md:text-sm">
           {[
-            "Ao vivo e online",
-            "Acesso à gravação",
-            "Suporte direto no dia",
+            "2 noites ao vivo, comigo, com a Bíblia na mão",
+            "Vc vai SABER quem é Lúcifer e como ele caiu pelo texto bíblico",
+            "Conhecimento que vc passa pros seus filhos, pra sua igreja, pro seu grupo",
           ].map((t) => (
             <li key={t} className="flex items-start gap-2">
               <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" strokeWidth={3} />
@@ -174,20 +178,96 @@ function Index() {
         </ul>
       </section>
 
-      {/* AFTER IMERSÃO */}
+      {/* VIRADA DE CHAVE */}
+      <section className="px-5 pt-14 text-center">
+        <span className="inline-block rounded-full border border-primary/60 px-5 py-2 text-xs font-bold italic text-primary">
+          A virada de chave
+        </span>
+        <h2 className="sec-h2 mx-auto mt-6 max-w-sm text-[26px] font-extrabold leading-tight">
+          Tem coisa sobre Lúcifer na Bíblia que{" "}
+          <em className="not-italic" style={{ color: "var(--blood)" }}>
+            vc nunca ouviu na sua igreja inteira.
+          </em>
+        </h2>
+        <p className="mx-auto mt-5 max-w-sm text-left text-[14px] leading-relaxed">
+          Vc já ouviu mil coisas sobre Lúcifer. Que ele era anjo. Que ele caiu. Que
+          ele virou Satanás. Que ele queria ser igual a Deus. Só que olha que loucura:
+          muita coisa que vc ouviu sobre ele{" "}
+          <strong>não tá em lugar nenhum da Bíblia.</strong> Tá em filme. Tá em série.
+          Tá em vídeo de TikTok. Tá na boca de pastor que fala mais o que ele ACHA do
+          que o que tá escrito.
+        </p>
+
+        <div
+          className="quote mx-auto mt-6 max-w-sm rounded-xl p-5 text-left text-[15px] leading-snug text-white"
+          style={{ background: "var(--blood)" }}
+        >
+          "Hoje a gente sabe mais sobre Lúcifer por filme da Netflix do que pela
+          própria Bíblia. EU TO MENTINDO?"
+        </div>
+
+        <p className="mx-auto mt-6 max-w-sm text-left text-[14px] leading-relaxed">
+          E o pior. O que tá DE FATO escrito na Bíblia sobre ele é mil vezes mais doido
+          do que qualquer filme que vc já viu. Tem capítulo inteiro de Isaías que quase
+          ninguém estuda direito. Tem Ezequiel 28 que vc provavelmente nunca leu com
+          atenção. Tem Apocalipse 12 que é absurdo de profundo. E ninguém te leva por
+          isso. Ninguém senta com vc, abre o texto e te explica versículo por versículo.
+        </p>
+
+        <div className="mx-auto mt-8 max-w-sm space-y-2">
+          <p className="text-[15px] font-bold" style={{ color: "var(--ember-deep)" }}>
+            Achismo te deixa na névoa.
+          </p>
+          <p className="text-[15px] font-bold" style={{ color: "var(--blood)" }}>
+            Bíblia te dá clareza.
+          </p>
+        </div>
+
+        <h3 className="sec-h2 mx-auto mt-8 max-w-sm text-[22px] font-extrabold leading-tight">
+          E se vc pudesse entender tudo isso em{" "}
+          <em className="not-italic" style={{ color: "var(--blood)" }}>2 noites?</em>
+        </h3>
+      </section>
+
+      {/* HOJE × DEPOIS */}
       <section className="px-5 pt-12">
-        <div className="rounded-2xl border-2 border-primary/40 bg-card p-6">
-          <div className="-mt-10 mb-4 inline-block bg-primary px-4 py-2 text-sm font-extrabold tracking-wide text-primary-foreground">
-            DEPOIS DA IMERSÃO!
+        <div className="rounded-2xl border-2 bg-card p-6" style={{ borderColor: "var(--blood)" }}>
+          <div
+            className="-mt-10 mb-4 inline-block px-4 py-2 text-sm font-extrabold tracking-wide text-white"
+            style={{ background: "var(--blood)" }}
+          >
+            HOJE
           </div>
           <ul className="space-y-3 text-sm font-bold">
             {[
-              "Squad de agentes configurado",
-              "Processos rodando sozinhos",
-              "I.A. Integrada na sua operação",
-              "Sistema replicável",
-              "Operação escalável",
-              "Clareza sobre qual ferramenta usar quando",
+              "Vc ouve falar de Lúcifer mas não sabe a história dele de verdade",
+              "Mistura o que tá na Bíblia com o que tá em filme",
+              "Tem mais medo de Satanás do que confiança em Deus",
+              "Engole pregação que mais inventa do que prega",
+              "Não sabe a diferença entre anjo, querubim, serafim e trono",
+              "Nunca leu Isaías 14, Ezequiel 28 ou Apocalipse 12 com atenção",
+              "Vê filme de tema espiritual e não sabe o que é Bíblia e o que é roteiro",
+            ].map((t) => (
+              <li key={t} className="flex items-start gap-3">
+                <X className="mt-0.5 h-5 w-5 flex-shrink-0" strokeWidth={3} style={{ color: "var(--blood)" }} />
+                <span>{t}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-8 rounded-2xl border-2 border-primary/40 bg-card p-6">
+          <div className="-mt-10 mb-4 inline-block bg-primary px-4 py-2 text-sm font-extrabold tracking-wide text-primary-foreground">
+            DEPOIS DAS 2 NOITES
+          </div>
+          <ul className="space-y-3 text-sm font-bold">
+            {[
+              "Vc SABE quem é Lúcifer e como ele caiu pelo texto bíblico",
+              "A queda versículo por versículo (Isaías 14, Ezequiel 28, Apocalipse 12)",
+              "O mundo espiritual mapeado: anjo, querubim, serafim, trono, principado",
+              "Filtro pra distinguir pregação séria de espiritualismo barato",
+              "Vê filme/série e SABE o que é Bíblia e o que é invenção",
+              "Conhecimento que vc passa pros seus filhos, pra sua igreja, pra sua família",
             ].map((t) => (
               <li key={t} className="flex items-start gap-3">
                 <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" strokeWidth={3} />
@@ -196,9 +276,10 @@ function Index() {
             ))}
           </ul>
         </div>
+
         <div className="mx-auto mt-6 max-w-sm">
           <a href="#inscricao" className={ctaBtn}>
-            QUERO MONTAR MEU SQUAD
+            QUERO SABER A VERDADE
           </a>
         </div>
       </section>
@@ -207,47 +288,51 @@ function Index() {
       <section className="mt-12 bg-[var(--dark-section)] px-5 py-12 text-[var(--dark-section-foreground)]">
         <div className="text-center">
           <span className="inline-block rounded-full border border-primary/60 px-5 py-2 text-xs font-bold italic text-primary">
-            O QUE VAMOS IMPLEMENTAR
+            O que vamos estudar
           </span>
-          <h2 className="mt-6 text-3xl font-extrabold leading-tight">
+          <h2 className="sec-h2 mt-6 text-3xl font-extrabold leading-tight">
             Os 4 blocos da
             <br />
-            <em className="not-italic text-primary">Missão na Prática</em>
+            <em className="not-italic text-primary">Imersão na Prática.</em>
           </h2>
           <p className="mx-auto mt-5 max-w-sm text-sm leading-relaxed">
-            <strong>Nada de conteúdo solto.</strong> A experiência foi
-            organizada para você sair do diagnóstico até a multiplicação com uma
-            linha lógica e prática de implementação.
+            Nada de conteúdo solto. Vc vai sair das 2 noites com a Bíblia na mão
+            entendendo o mundo espiritual e a queda de Lúcifer do jeito que tá escrito.
+            Da estrutura do céu até a guerra que vc trava todo dia sem nem saber.
           </p>
         </div>
 
         <div className="mt-8 space-y-5">
           {[
             {
-              n: "BLOCO 1",
-              t: "DIAGNÓSTICO",
-              icon: Search,
-              d: "Antes de criar qualquer agente, você precisa saber para onde olhar primeiro. Vamos mapear os processos que mais drenam tempo e energia da sua operação.",
+              n: "Bloco 01 / Hierarquia",
+              t: "Anjos, querubins, serafins e tronos.",
+              icon: Crown,
+              d: "Antes da queda, vc precisa entender o céu. Quem é anjo, quem é querubim, quem é serafim, quem é trono. Como a Bíblia descreve cada um. E pq isso muda TUDO o que vc pensa que sabe.",
+              refs: "Is 6 · Ez 1 · Ap 4–5",
             },
             {
-              n: "BLOCO 2",
-              t: "CRIAÇÃO",
-              icon: Brain,
-              d: "Você vai configurar instruções, definir função e criar cada agente do seu time de I.A do zero, ao vivo, na sua tela, sem escrever uma linha de código.",
+              n: "Bloco 02 / Reino das trevas",
+              t: "Principados, potestades, dominações.",
+              icon: Eye,
+              d: "O que tá escrito sobre a estrutura do mal e como ela opera AGORA. Sem ficção, sem decreto vazio, sem espetáculo. O texto bíblico, lido como ele é.",
+              refs: "Ef 6 · Cl 2 · Dn 10",
             },
             {
-              n: "BLOCO 3",
-              t: "ORQUESTRAÇÃO",
-              icon: Network,
-              d: "Agentes isolados executam tarefas. Squads executam operações. Aqui você conecta os agentes, monta a sequência de trabalho e testa o sistema funcionando em tempo real.",
+              n: "Bloco 03 / A queda",
+              t: "Quem Lúcifer era. Como ele caiu.",
+              icon: Flame,
+              d: "Aqui é o coração da imersão. Quem Lúcifer era. Como ele caiu. Por que ele caiu. Isaías 14, Ezequiel 28, Apocalipse 12 versículo por versículo. A história escondida que quase ninguém te conta.",
+              refs: "Is 14 · Ez 28 · Ap 12",
             },
             {
-              n: "BLOCO 4",
-              t: "MULTIPLICAÇÃO",
-              icon: Users,
-              d: "O raciocínio que você usou para montar o primeiro Squad serve para qualquer outro. Aqui você entende como replicar e escalar.",
+              n: "Bloco 04 / Guerra espiritual",
+              t: "A guerra que continua até hoje.",
+              icon: Swords,
+              d: "A queda de Lúcifer não acabou em Lúcifer. A guerra continua. E ela tá acontecendo na sua vida AGORA. A armadura de Deus, a oração, a Palavra. Como agir biblicamente. Sem fórmula mágica, sem decreto vazio.",
+              refs: "Ef 6 · Tg 4 · 1Pe 5",
             },
-          ].map(({ n, t, d, icon: Icon }) => (
+          ].map(({ n, t, d, icon: Icon, refs }) => (
             <div
               key={n}
               className="rounded-2xl border border-primary/30 bg-black/30 p-5"
@@ -258,10 +343,13 @@ function Index() {
               <p className="mt-4 text-xs font-bold italic tracking-wider text-primary">
                 {n}
               </p>
-              <h3 className="mt-1 border-b-2 border-primary/60 pb-1 text-2xl font-extrabold italic">
+              <h3 className="sec-h2 mt-1 border-b-2 border-primary/60 pb-2 text-xl font-extrabold leading-tight">
                 {t}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-white/80">{d}</p>
+              <p className="bloco-refs mt-3 text-sm" style={{ color: "var(--ember-soft)" }}>
+                {refs}
+              </p>
             </div>
           ))}
 
@@ -269,12 +357,12 @@ function Index() {
             <div className="flex items-start gap-4">
               <HelpCircle className="h-12 w-12 flex-shrink-0 text-primary" strokeWidth={1.5} />
               <div>
-                <h3 className="text-xl font-extrabold italic text-primary">
-                  TIRA-DÚVIDAS AO VIVO
-                </h3>
-                <p className="mt-2 text-sm text-white/80">
-                  Sessão aberta de perguntas e respostas em tempo real.
+                <p className="text-xs font-bold italic tracking-wider text-primary">
+                  Tira-dúvidas ao vivo
                 </p>
+                <h3 className="sec-h2 mt-1 text-lg font-extrabold text-white">
+                  Sessão aberta de perguntas e respostas em tempo real, nas duas noites.
+                </h3>
               </div>
             </div>
           </div>
@@ -282,22 +370,23 @@ function Index() {
 
         {/* GLOSSARY */}
         <div className="mt-14 text-center">
-          <h2 className="text-3xl font-extrabold leading-tight">
-            Descubra <em className="not-italic text-primary">de uma vez por todas!</em>
+          <h2 className="sec-h2 text-3xl font-extrabold leading-tight">
+            Conheça os termos{" "}
+            <em className="not-italic text-primary">de uma vez por todas.</em>
           </h2>
           <p className="mx-auto mt-4 max-w-xs text-sm">
-            Vamos explicar os principais termos que você vai usar durante a
-            imersão.
+            Os termos bíblicos que vc vai estudar durante a imersão. E que
+            provavelmente vc NUNCA estudou com profundidade.
           </p>
           <div className="mx-auto mt-8 grid max-w-xs grid-cols-2 gap-4">
             {[
-              { l: "Skills", i: Sparkles },
-              { l: "Squads", i: Users },
-              { l: "Cloud CoWork", i: Cloud },
-              { l: "Cloud Code", i: Code2 },
-              { l: "Cloud Chat", i: MessageSquare },
-              { l: "Agentes", i: Bot },
-            ].map(({ l, i: Icon }) => (
+              { l: "Querubins", r: "Ez 1 · Gn 3", i: Crown },
+              { l: "Serafins", r: "Is 6", i: Flame },
+              { l: "Tronos", r: "Cl 1", i: Sparkles },
+              { l: "Principados", r: "Ef 6 · Cl 2", i: Eye },
+              { l: "Lúcifer", r: "Is 14 · Ez 28", i: Swords },
+              { l: "Demônios", r: "Mc 5 · Mt 12", i: ScrollText },
+            ].map(({ l, r, i: Icon }) => (
               <div
                 key={l}
                 className="rounded-2xl border border-primary/30 bg-gradient-to-b from-primary/15 to-transparent p-5 text-center"
@@ -307,6 +396,9 @@ function Index() {
                 </div>
                 <div className="mx-auto my-3 h-0.5 w-6 bg-primary" />
                 <p className="text-sm font-extrabold">{l}</p>
+                <p className="termo-ref mt-1 text-xs" style={{ color: "var(--ember-soft)" }}>
+                  {r}
+                </p>
               </div>
             ))}
           </div>
@@ -324,66 +416,67 @@ function Index() {
       {/* PARA QUEM É */}
       <section className="px-5 pt-12 text-center">
         <span className="inline-block rounded-full border border-primary/60 px-5 py-2 text-xs font-bold italic">
-          PARA QUEM É
+          Para quem é
         </span>
-        <h2 className="mt-6 text-3xl font-extrabold leading-tight">
-          Essa Missão é
-          <br />
-          <em className="not-italic text-primary">para VOCÊ</em> se:
+        <h2 className="sec-h2 mt-6 text-3xl font-extrabold leading-tight">
+          Essa imersão é{" "}
+          <em className="not-italic text-primary">pra vc</em> se:
         </h2>
 
         <div className="mt-8 space-y-4 text-left">
           {[
             {
-              t: "É CRIADOR DE CONTEÚDO",
-              s: "A meta não é só criar mais rápido.",
-              d: "É montar agentes que produzem por você, imagem, texto, fluxo de publicação, enquanto você foca no que só você pode fazer.",
+              n: "01",
+              t: "✓ Vc lê a Bíblia e quer ir além",
+              d: "A meta não é só conhecer mais histórias. É finalmente entender o mundo espiritual com profundidade. O que tá escrito de verdade sobre o invisível. Sem espiritualismo, sem ficção, sem opinião disfarçada de revelação.",
             },
             {
-              t: "TEM AGÊNCIA OU PRESTADOR DE SERVIÇOS",
-              s: "A meta não é só ganhar tempo.",
-              d: "É sair da posição de gargalo e construir uma operação onde o volume de entrega não depende da sua disponibilidade.",
+              n: "02",
+              t: "✓ Vc é líder ou dá aula na igreja",
+              d: "A meta não é só repassar conteúdo. É ter base bíblica de verdade pra ensinar com autoridade sobre anjo, demônio e a queda de Lúcifer. Versículo na mão. Sem ter que improvisar quando alguém pergunta.",
             },
             {
-              t: "TEM NEGÓCIO E QUER ESCALAR",
-              s: "A meta não é só cortar custo fixo.",
-              d: "É substituir processos manuais por sistemas inteligentes, e crescer sem precisar contratar para cada nova demanda.",
+              n: "03",
+              t: "✓ Vc tem filhos e quer proteger eles",
+              d: "A meta não é só evitar que eles vejam coisa errada. É dar pros seus filhos uma base bíblica clara sobre o invisível, num mundo que mistura tudo e não explica nada direito.",
             },
             {
-              t: "TRABALHA SOZINHO",
-              s: "A meta não é só ser mais eficiente.",
-              d: "É operar com a capacidade de entrega de quem tem equipe, sem ter ninguém na folha.",
+              n: "04",
+              t: "✓ Vc estuda a Bíblia sozinho e trava",
+              d: "A meta não é só ler mais. É ter clareza nos temas que parecem confusos quando vc abre Isaías, Ezequiel ou Apocalipse e fica sem direção. Esses 3 livros principalmente.",
             },
           ].map((b) => (
             <div
               key={b.t}
               className="rounded-2xl border-2 border-primary/40 bg-card p-5"
             >
-              <div className="flex items-center gap-2">
-                <Check className="h-5 w-5 text-primary" strokeWidth={3} />
-                <h3 className="text-base font-extrabold">{b.t}</h3>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl font-black italic" style={{ color: "var(--ember-deep)" }}>
+                  {b.n}
+                </span>
+                <h3 className="sec-h2 mt-1 text-base font-extrabold leading-tight">{b.t}</h3>
               </div>
-              <p className="mt-3 text-sm font-bold">{b.s}</p>
-              <p className="mt-1 text-sm leading-relaxed">{b.d}</p>
+              <p className="mt-3 text-sm leading-relaxed">{b.d}</p>
             </div>
           ))}
         </div>
 
         {/* DARK closing card */}
         <div className="mt-8 rounded-2xl bg-[var(--dark-section)] p-6 text-left text-white">
-          <h3 className="text-xl font-extrabold leading-tight">
-            ACOMPANHA A IA AVANÇAR MAS NUNCA PAROU PARA AGIR
+          <h3 className="sec-h2 text-xl font-extrabold leading-tight">
+            Vc ouve pregação mas nunca{" "}
+            <em className="not-italic" style={{ color: "var(--ember-soft)" }}>
+              estudou de verdade
+            </em>{" "}
+            o que a Bíblia diz.
           </h3>
-          <p className="mt-4 inline-block bg-primary px-2 py-1 text-sm font-bold">
-            O objetivo não é só estar atualizado.
+          <p className="mt-4 inline-block px-2 py-1 text-sm font-bold text-white" style={{ background: "var(--blood)" }}>
+            O objetivo não é só ouvir mais.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-white/85">
-            É parar de assistir a IA avançar sem você e usar um sábado para
-            mudar de posição de vez.
-            <br />
-            <br />
-            Você não tem 8 horas pra eu te colocar a par da IA mais poderosa do
-            mercado?
+            É parar de engolir achismo. É usar 2 noites pra mudar de posição de vez.
+            Vc não tem 5 horas pra eu te mostrar o que a Bíblia ensina de verdade
+            sobre o invisível e a queda de Lúcifer?
           </p>
         </div>
 
@@ -397,20 +490,23 @@ function Index() {
       {/* NÃO É PARA VOCÊ */}
       <section className="px-5 pt-12 text-center">
         <div className="rounded-2xl border border-border bg-card p-6 text-left">
-          <h2 className="text-lg font-extrabold">
-            ESSA IMERSÃO{" "}
-            <em className="not-italic text-primary">NÃO É PARA VOCÊ</em> SE:
+          <p className="text-xs font-bold italic tracking-wider" style={{ color: "var(--ember-deep)" }}>
+            Sinceridade
+          </p>
+          <h2 className="sec-h2 mt-2 text-lg font-extrabold">
+            Essa imersão{" "}
+            <em className="not-italic" style={{ color: "var(--blood)" }}>não é pra vc</em> se:
           </h2>
           <ul className="mt-5 space-y-3 text-sm">
             {[
-              "Quer assistir sem implementar nada",
-              "Está esperando o momento perfeito para começar",
-              "Quer resultado sem mudar como trabalha hoje",
-              "Não quer aumentar a produtividade",
-              "Sempre dependendo da sua execução",
+              "Vc quer assistir sem abrir a Bíblia junto",
+              "Vc espera ouvir confirmação de achismo",
+              "Vc quer experiência mística sem texto bíblico",
+              "Vc não quer ler versículo",
+              "Vc acredita só no que sentiu",
             ].map((t) => (
               <li key={t} className="flex items-start gap-3">
-                <X className="mt-0.5 h-5 w-5 flex-shrink-0 text-muted-foreground" strokeWidth={3} />
+                <X className="mt-0.5 h-5 w-5 flex-shrink-0" strokeWidth={3} style={{ color: "var(--blood)" }} />
                 <span>{t}</span>
               </li>
             ))}
@@ -418,7 +514,7 @@ function Index() {
         </div>
         <div className="mx-auto mt-8 max-w-sm">
           <a href="#inscricao" className={ctaBtn}>
-            ESSA MISSÃO É PARA MIM!
+            ESSA IMERSÃO É PRA MIM
           </a>
         </div>
       </section>
@@ -427,14 +523,14 @@ function Index() {
       <section className="mt-12 bg-[var(--dark-section)] px-5 py-12 text-[var(--dark-section-foreground)]">
         <div className="text-center">
           <p className="text-sm font-semibold tracking-[0.3em] text-white/70">
-            MISSÃO
+            IMERSÃO
           </p>
-          <div className="mt-2 flex items-center justify-center gap-2 text-4xl font-black leading-none tracking-tight">
-            <Sparkles className="h-10 w-10 text-primary" />
-            <span className="text-white">Claude</span>
+          <div className="brand-title mt-2 flex items-center justify-center gap-2 text-4xl font-black leading-none tracking-tight">
+            <Flame className="h-10 w-10" style={{ color: "var(--blood)" }} />
+            <span style={{ color: "var(--blood)" }}>LÚCIFER</span>
           </div>
           <p className="mt-1 text-xs font-bold tracking-[0.5em] text-primary">
-            CODE
+            A QUEDA
           </p>
 
           <div className="mx-auto mt-6 inline-block rounded-full border border-primary/60 px-6 py-2 text-sm font-bold italic text-primary">
