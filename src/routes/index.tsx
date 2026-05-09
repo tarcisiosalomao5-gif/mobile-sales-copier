@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-claude.jpg";
+import luciferLogo from "@/assets/lucifer-logo.png";
 import {
   Calendar,
   Clock,
@@ -106,18 +107,16 @@ function Index() {
 
       <section className="hero-copy relative z-0 px-5 text-center">
         {/* 1. Logo sobreposto */}
-        <div
-          className="brand relative z-10 mx-auto -mt-[50px] py-3 md:-mt-[110px] md:py-6"
-          style={{ position: "relative" }}
+        <header
+          className="brand relative z-10 -mt-[50px] px-5 text-center md:-mt-[70px]"
         >
-          <div className="brand-title flex items-center justify-center gap-2 text-[1.75rem] font-black leading-none tracking-tight md:text-[2rem]" style={{ color: "var(--blood)" }}>
-            <Flame className="h-9 w-9 md:h-11 md:w-11" style={{ color: "var(--blood)" }} />
-            <span>LÚCIFER</span>
-          </div>
-          <p className="mt-1 text-[10px] font-bold tracking-[0.38em]" style={{ color: "var(--ember-deep)" }}>
-            A QUEDA · IMERSÃO BÍBLICA
-          </p>
-        </div>
+          <img
+            src={luciferLogo}
+            alt="A Queda de Lúcifer — Imersão Bíblica"
+            className="brand-logo mx-auto block h-auto w-full max-w-[360px] md:max-w-[460px]"
+            style={{ background: "transparent" }}
+          />
+        </header>
 
         {/* 2. Date box */}
         <div className="mx-auto my-[10px] flex max-w-sm items-center justify-center gap-3 rounded-md border border-border bg-card px-[14px] py-[10px] text-[13px] font-semibold md:my-5 md:px-[18px] md:py-4 md:text-sm">
