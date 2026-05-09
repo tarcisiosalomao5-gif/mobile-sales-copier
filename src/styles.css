@@ -432,19 +432,14 @@
     color: var(--ember) !important;
   }
 
-  /* Grifo mobile */
-  .hero-lead-grifado {
-    font-size: 14px !important;
-    padding: 10px 16px !important;
-    max-width: 320px !important;
-    margin-bottom: 10px !important;
-  }
-
-  /* Lead normal mobile */
-  .hero-lead-normal {
+  /* Lead combinado mobile */
+  .hero-lead-combined {
     font-size: 13.5px !important;
-    line-height: 1.45 !important;
-    padding: 0 18px !important;
+    line-height: 1.5 !important;
+    padding: 0 20px !important;
     margin-bottom: 16px !important;
+  }
+  .hero-lead-mark {
+    padding: 2px 6px !important;
   }
 }
