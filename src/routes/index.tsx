@@ -85,7 +85,7 @@ function Index() {
           alt="Missão Claude Code"
           width={1024}
           height={1024}
-          className="block w-full"
+          className="mx-auto block h-[38vh] w-full object-cover object-top"
         />
       </section>
 
