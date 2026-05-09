@@ -108,7 +108,7 @@ function Index() {
       <section className="hero-copy relative z-0 px-5 text-center">
         {/* 1. Logo sobreposto */}
         <header
-          className="brand relative z-50 -mt-[80px] mb-2 px-5 text-center"
+          className="brand relative z-50 -mt-[80px] mb-2 px-5 text-center md:-mt-[70px] md:mb-0"
         >
           <img
             src={luciferLogo}
