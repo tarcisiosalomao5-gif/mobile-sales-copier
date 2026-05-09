@@ -287,22 +287,27 @@
   transform: scale(0.98);
 }
 
-/* Grifo do "Aprenda ao vivo" — vibrante, largo, premium */
-.hero-lead-grifado {
+/* Parágrafo combinado com grifo inline (estilo "marca-texto") */
+.hero-lead-combined {
+  color: var(--smoke);
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.55;
+  text-align: center;
+  padding: 0 18px;
+  margin: 0 auto 18px auto;
+}
+
+.hero-lead-mark {
   background: linear-gradient(95deg, var(--flame) 0%, var(--flame-bright) 50%, var(--flame) 100%);
   color: #FFFFFF;
-  font-weight: 800;
-  font-family: "Manrope", sans-serif;
-  font-size: 15.5px;
-  padding: 11px 18px;
-  border-radius: 6px;
-  display: block;
-  text-align: center;
-  margin: 0 auto 12px auto;
-  line-height: 1.3;
-  max-width: 340px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
   letter-spacing: 0.01em;
-  box-shadow: 0 4px 16px rgba(194, 105, 31, 0.35);
 }
 
 /* ============================================
