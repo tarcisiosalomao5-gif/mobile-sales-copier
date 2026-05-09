@@ -523,14 +523,14 @@ function Index() {
       <section className="mt-12 bg-[var(--dark-section)] px-5 py-12 text-[var(--dark-section-foreground)]">
         <div className="text-center">
           <p className="text-sm font-semibold tracking-[0.3em] text-white/70">
-            MISSÃO
+            IMERSÃO
           </p>
-          <div className="mt-2 flex items-center justify-center gap-2 text-4xl font-black leading-none tracking-tight">
-            <Sparkles className="h-10 w-10 text-primary" />
-            <span className="text-white">Claude</span>
+          <div className="brand-title mt-2 flex items-center justify-center gap-2 text-4xl font-black leading-none tracking-tight">
+            <Flame className="h-10 w-10" style={{ color: "var(--blood)" }} />
+            <span style={{ color: "var(--blood)" }}>LÚCIFER</span>
           </div>
           <p className="mt-1 text-xs font-bold tracking-[0.5em] text-primary">
-            CODE
+            A QUEDA
           </p>
 
           <div className="mx-auto mt-6 inline-block rounded-full border border-primary/60 px-6 py-2 text-sm font-bold italic text-primary">
