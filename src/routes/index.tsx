@@ -16,6 +16,8 @@ import {
   Network,
   HelpCircle,
 } from "lucide-react";
+import { useState } from "react";
+import { Minus, Plus, ShieldCheck, Award, Lock } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -392,7 +394,240 @@ function Index() {
         </div>
       </section>
 
+      {/* NÃO É PARA VOCÊ */}
+      <section className="px-5 pt-12 text-center">
+        <div className="rounded-2xl border border-border bg-card p-6 text-left">
+          <h2 className="text-lg font-extrabold">
+            ESSA IMERSÃO{" "}
+            <em className="not-italic text-primary">NÃO É PARA VOCÊ</em> SE:
+          </h2>
+          <ul className="mt-5 space-y-3 text-sm">
+            {[
+              "Quer assistir sem implementar nada",
+              "Está esperando o momento perfeito para começar",
+              "Quer resultado sem mudar como trabalha hoje",
+              "Não quer aumentar a produtividade",
+              "Sempre dependendo da sua execução",
+            ].map((t) => (
+              <li key={t} className="flex items-start gap-3">
+                <X className="mt-0.5 h-5 w-5 flex-shrink-0 text-muted-foreground" strokeWidth={3} />
+                <span>{t}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="mx-auto mt-8 max-w-sm">
+          <a href="#inscricao" className={ctaBtn}>
+            ESSA MISSÃO É PARA MIM!
+          </a>
+        </div>
+      </section>
+
+      {/* OFERTA / PRICING */}
+      <section className="mt-12 bg-[var(--dark-section)] px-5 py-12 text-[var(--dark-section-foreground)]">
+        <div className="text-center">
+          <p className="text-sm font-semibold tracking-[0.3em] text-white/70">
+            MISSÃO
+          </p>
+          <div className="mt-2 flex items-center justify-center gap-2 text-4xl font-black leading-none tracking-tight">
+            <Sparkles className="h-10 w-10 text-primary" />
+            <span className="text-white">Claude</span>
+          </div>
+          <p className="mt-1 text-xs font-bold tracking-[0.5em] text-primary">
+            CODE
+          </p>
+
+          <div className="mx-auto mt-6 inline-block rounded-full border border-primary/60 px-6 py-2 text-sm font-bold italic text-primary">
+            LOTE COM VALOR PROMOCIONAL
+          </div>
+
+          <ul className="mx-auto mt-6 max-w-xs space-y-3 text-left text-sm font-bold italic">
+            {[
+              "1 Dia de imersão prática ao vivo",
+              "Diagnóstico, Criação, Orquestração e Multiplicação",
+              "Implementação guiada",
+              "Q&A em tempo real durante o evento",
+              "Acesso ao grupo exclusivo de participantes",
+            ].map((t) => (
+              <li key={t} className="flex items-start gap-3">
+                <span className="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center bg-primary">
+                  <Check className="h-3.5 w-3.5 text-primary-foreground" strokeWidth={4} />
+                </span>
+                <span>{t}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mx-auto mt-8 rounded-2xl border border-primary/30 bg-black/40 p-6">
+            <p className="text-sm font-semibold text-white/90">
+              DE <s className="text-white/60 decoration-primary">R$497</s> POR APENAS
+            </p>
+            <p className="mt-3 text-7xl font-black italic text-primary">
+              <span className="align-top text-3xl">R$</span>37
+            </p>
+            <div className="mx-auto mt-6 max-w-sm">
+              <a href="#inscricao" className={ctaBtn}>
+                QUERO GARANTIR MINHA VAGA!
+              </a>
+            </div>
+            <div className="mt-6 flex items-center justify-center gap-5 text-[11px] font-bold text-white/70">
+              <span className="inline-flex items-center gap-1.5">
+                <ShieldCheck className="h-4 w-4 text-primary" /> COMPRA SEGURA
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Award className="h-4 w-4 text-primary" /> SATISFAÇÃO GARANTIDA
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Lock className="h-4 w-4 text-primary" /> PRIVACIDADE PROTEGIDA
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* GARANTIA */}
+        <div className="mt-14 text-center">
+          <h3 className="text-2xl font-black italic text-primary">
+            GARANTIA INCONDICIONAL
+            <br />
+            DE 7 DIAS · RISCO ZERO
+          </h3>
+          <div className="mx-auto mt-8 flex h-44 w-44 items-center justify-center rounded-full border-[6px] border-dashed border-white/40 bg-gradient-to-b from-white/10 to-white/5">
+            <div className="text-center">
+              <p className="text-5xl font-black text-white">7</p>
+              <p className="text-[11px] font-bold tracking-widest text-white/80">
+                DIAS DE
+                <br />
+                GARANTIA
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* QUEM CONDUZ */}
+      <section className="px-5 pt-12">
+        <div className="mx-auto max-w-sm rounded-full border border-primary/60 px-6 py-3 text-center text-xs font-bold italic">
+          QUEM VAI CONDUZIR A IMERSÃO
+        </div>
+
+        <div className="mt-8 rounded-2xl border-2 border-primary/40 bg-card p-6">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <h3 className="text-2xl font-black italic text-primary">
+                TIAGO LEMOS
+              </h3>
+              <span className="mt-2 inline-block bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">
+                @tiagolemosx
+              </span>
+            </div>
+            <div className="h-20 w-20 flex-shrink-0 rounded-full border-2 border-primary/40 bg-muted" />
+          </div>
+          <hr className="my-5 border-border" />
+          <div className="space-y-4 text-sm leading-relaxed">
+            <p>
+              Tiago Lemos é fundador do Mestres da IA, o ecossistema completo
+              de treinamentos e ferramentas de inteligência artificial no
+              Brasil, com mais de 7.000 alunos formados.
+            </p>
+            <p>
+              Criador do Ruptura, o método de criação de conteúdo audiovisual
+              com IA mais avançado do mercado nacional, e do PromptX, a
+              plataforma de prompts profissionais para criadores e
+              profissionais digitais.
+            </p>
+            <p>
+              Tiago não ensina teoria. Ele ensina o que usa na própria
+              operação, e o Claude Code é hoje parte central de como ele
+              trabalha, cria e escala.
+            </p>
+            <p className="font-bold text-primary">
+              "Eu só ensino o que roda na minha operação. Tudo que você vai
+              aprender nessa imersão está ativo hoje no meu negócio."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="px-5 pt-12">
+        <h2 className="text-center text-2xl font-extrabold">
+          PERGUNTAS FREQUENTES
+        </h2>
+        <div className="mx-auto mt-6 max-w-md space-y-3">
+          <Faq />
+        </div>
+
+        <div className="mx-auto mt-10 max-w-sm">
+          <a href="#inscricao" className={ctaBtn}>
+            QUERO GARANTIR MEU INGRESSO
+          </a>
+        </div>
+
+        <div className="mx-auto mt-6 flex max-w-md flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-md border border-border bg-card px-4 py-3 text-xs font-bold tracking-wide">
+          <span className="inline-flex items-center gap-1.5">
+            <Calendar className="h-4 w-4 text-primary" /> SÁBADO, 16 DE MAIO
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <Clock className="h-4 w-4 text-primary" /> 09H ÀS 17H
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <span className="h-2 w-2 rounded-full bg-primary" /> ONLINE
+          </span>
+        </div>
+      </section>
+
       <StickyVagas />
     </main>
+  );
+}
+
+function Faq() {
+  const items = [
+    {
+      q: "O evento é ao vivo ou gravado?",
+      a: "O evento é 100% ao vivo. Ao finalizar sua inscrição, você terá a opção de adquirir o acesso à gravação.",
+    },
+    {
+      q: "Não tenho experiência técnica. Vou conseguir implementar?",
+      a: "Sim. A imersão foi desenhada para qualquer pessoa, sem precisar escrever código.",
+    },
+    {
+      q: "Preciso criar conta no Claude Code antes?",
+      a: "Não é obrigatório. Vamos te orientar passo a passo no dia.",
+    },
+    {
+      q: "Funciona para qualquer nicho?",
+      a: "Sim. O método de orquestração de agentes se aplica a qualquer área de atuação.",
+    },
+    {
+      q: "Tem garantia?",
+      a: "Sim, 7 dias de garantia incondicional. Se não fizer sentido, devolvemos 100% do valor.",
+    },
+  ];
+  const [open, setOpen] = useState<number | null>(0);
+  return (
+    <>
+      {items.map((it, i) => {
+        const isOpen = open === i;
+        return (
+          <div key={it.q}>
+            <button
+              onClick={() => setOpen(isOpen ? null : i)}
+              className="flex w-full items-center gap-3 rounded-md bg-primary px-4 py-3 text-left text-sm font-bold text-primary-foreground"
+            >
+              {isOpen ? (
+                <Minus className="h-4 w-4 flex-shrink-0" strokeWidth={3} />
+              ) : (
+                <Plus className="h-4 w-4 flex-shrink-0" strokeWidth={3} />
+              )}
+              <span>{it.q}</span>
+            </button>
+            {isOpen && (
+              <p className="px-4 py-4 text-sm leading-relaxed">{it.a}</p>
+            )}
+          </div>
+        );
+      })}
+    </>
   );
 }
