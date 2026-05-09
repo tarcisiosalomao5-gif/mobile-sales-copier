@@ -521,16 +521,14 @@ function Index() {
       {/* OFERTA / PRICING */}
       <section className="mt-12 bg-[var(--dark-section)] px-5 py-12 text-[var(--dark-section-foreground)]">
         <div className="text-center">
-          <p className="text-sm font-semibold tracking-[0.3em] text-white/70">
-            IMERSÃO
-          </p>
-          <div className="brand-title mt-2 flex items-center justify-center gap-2 text-4xl font-black leading-none tracking-tight">
-            <Flame className="h-10 w-10" style={{ color: "var(--blood)" }} />
-            <span style={{ color: "var(--blood)" }}>LÚCIFER</span>
-          </div>
-          <p className="mt-1 text-xs font-bold tracking-[0.5em] text-primary">
-            A QUEDA
-          </p>
+          <header className="offer-brand mb-7 px-5 text-center">
+            <img
+              src={luciferLogo}
+              alt="A Queda de Lúcifer — Imersão Bíblica"
+              className="brand-logo offer-logo mx-auto mb-6 block h-auto w-full max-w-[320px] md:max-w-[420px]"
+              style={{ background: "transparent" }}
+            />
+          </header>
 
           <div className="mx-auto mt-6 inline-block rounded-full border border-primary/60 px-6 py-2 text-sm font-bold italic text-primary">
             LOTE COM VALOR PROMOCIONAL
