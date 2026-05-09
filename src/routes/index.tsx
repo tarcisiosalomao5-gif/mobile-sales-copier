@@ -136,13 +136,9 @@ function Index() {
           e sobre o mundo espiritual.
         </h1>
 
-        {/* 4. Lead grifado */}
-        <p className="hero-lead-grifado hero-anim-4">
-          Aprenda ao vivo sobre a queda de Lúcifer
-        </p>
-
-        {/* 5. Lead normal */}
-        <p className="hero-lead-normal hero-anim-5 mx-auto max-w-sm md:text-[15.5px] md:leading-snug">
+        {/* 4-5. Lead com grifo inline + continuação */}
+        <p className="hero-lead-combined hero-anim-4 mx-auto max-w-sm md:text-[15.5px] md:leading-snug">
+          <span className="hero-lead-mark">Aprenda ao vivo sobre a queda de Lúcifer</span>{" "}
           versículo por versículo. Entenda sobre o mundo espiritual e sobre o que realmente a Bíblia diz sobre isso.
         </p>
 
