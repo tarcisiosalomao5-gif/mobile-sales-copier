@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-lucifer.png";
 import luciferLogo from "@/assets/lucifer-logo.png";
-import luciferLogoOffer from "@/assets/lucifer-logo-offer.png";
 import {
   Calendar,
   Clock,
@@ -516,7 +515,7 @@ function Index() {
         <div className="text-center">
           <header className="offer-brand mb-7 px-5 text-center">
             <img
-              src={luciferLogoOffer}
+              src={luciferLogo}
               alt="A Queda de Lúcifer — Imersão Bíblica"
               className="brand-logo offer-logo mx-auto mb-6 block h-auto w-full max-w-[320px] md:max-w-[420px]"
               style={{ background: "transparent" }}
