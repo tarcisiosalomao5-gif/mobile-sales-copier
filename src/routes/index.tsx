@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-lucifer.png";
 import luciferLogo from "@/assets/lucifer-logo.png";
+import luciferLogoHorizontal from "@/assets/lucifer-logo-horizontal.png";
 import blocoQuerubins from "@/assets/bloco-querubins.png";
 import blocoDemonios from "@/assets/bloco-demonios.png";
 import blocoLucifer from "@/assets/bloco-lucifer.png";
@@ -527,14 +528,24 @@ function Index() {
       {/* OFERTA / PRICING */}
       <section className="mt-12 bg-[var(--dark-section)] px-5 py-12 text-[var(--dark-section-foreground)]">
         <div className="text-center">
-          <header className="offer-brand mb-7 px-5 text-center">
+          <header className="offer-brand relative mb-7 px-5 text-center">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-[120%] w-[110%] -translate-x-1/2 -translate-y-1/2"
+              style={{
+                background:
+                  "radial-gradient(ellipse 60% 55% at 70% 50%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.55) 30%, rgba(255,255,255,0.18) 60%, rgba(255,255,255,0) 80%)",
+                filter: "blur(8px)",
+              }}
+            />
             <img
-              src={luciferLogo}
+              src={luciferLogoHorizontal}
               alt="A Queda de Lúcifer — Imersão Bíblica"
-              className="brand-logo offer-logo mx-auto mb-6 block h-auto w-full max-w-[320px] md:max-w-[420px]"
+              className="brand-logo offer-logo relative z-10 mx-auto mb-6 block h-auto w-full max-w-[420px] md:max-w-[560px]"
               style={{
                 background: "transparent",
-                filter: "drop-shadow(0 0 30px rgba(255, 255, 255, 0.45)) drop-shadow(0 0 60px rgba(255, 255, 255, 0.25)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4))"
+                filter:
+                  "drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4))",
               }}
             />
           </header>
