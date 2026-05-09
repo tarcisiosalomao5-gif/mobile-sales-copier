@@ -64,8 +64,8 @@ function MarqueeBar() {
 
 function StickyVagas() {
   return (
-    <div
-      className="fixed inset-x-0 bottom-0 z-50 px-4 py-2 text-white md:px-[18px] md:py-3"
+      <div
+      className="fixed inset-x-0 bottom-0 z-50 px-[14px] pt-[6px] pb-2 text-white md:px-[18px] md:py-3"
       style={{ background: "var(--blood)" }}
     >
       <p className="text-center text-[11px] font-bold tracking-wide md:text-xs">
@@ -91,7 +91,7 @@ function Index() {
             alt="A queda de Lúcifer — anjo caindo dos céus"
             width={1920}
             height={1080}
-            className="hero-image-img mx-auto block h-[32vh] min-h-[240px] max-h-[290px] w-full object-cover md:h-[50vh] md:min-h-[360px] md:max-h-[480px]"
+            className="hero-image-img mx-auto block h-[26vh] max-h-[220px] w-full object-cover md:h-[50vh] md:min-h-[360px] md:max-h-[480px]"
             style={{ objectPosition: "center top" }}
           />
           {/* fade pra cream */}
@@ -108,7 +108,7 @@ function Index() {
       <section className="hero-copy relative z-0 px-5 text-center">
         {/* 1. Logo sobreposto */}
         <header
-          className="brand relative z-10 -mt-[60px] px-5 py-2 text-center md:-mt-[70px]"
+          className="brand relative z-50 -mt-[80px] mb-2 px-5 text-center md:-mt-[70px] md:mb-0"
         >
           <img
             src={luciferLogo}
@@ -119,7 +119,7 @@ function Index() {
         </header>
 
         {/* 2. Date box */}
-        <div className="mx-auto mx-[22px] mt-3 mb-[14px] flex max-w-sm items-center justify-center gap-3 rounded-md border border-border bg-card px-[14px] py-[10px] text-[13px] font-semibold md:my-5 md:px-[18px] md:py-4 md:text-sm">
+        <div className="mx-auto mx-[22px] mt-0 mb-[14px] flex max-w-sm items-center justify-center gap-3 rounded-md border border-border bg-card px-[14px] py-[10px] text-[13px] font-semibold md:my-5 md:px-[18px] md:py-4 md:text-sm">
           <span className="inline-flex items-center gap-1.5">
             <Calendar className="h-4 w-4 text-primary" /> 2 noites ao vivo
           </span>
@@ -130,7 +130,7 @@ function Index() {
         </div>
 
         {/* 3. Headline */}
-        <h1 className="sec-h2 mx-auto mb-3 max-w-sm px-[22px] text-[22px] font-extrabold leading-[1.18] md:mb-6 md:mt-5 md:px-0 md:text-[1.875rem] md:leading-[1.22]">
+        <h1 className="sec-h2 mx-5 mt-0 mb-[10px] max-w-sm text-[20px] font-extrabold leading-[1.2] md:mx-auto md:mb-6 md:mt-5 md:px-0 md:text-[1.875rem] md:leading-[1.22]">
           Em 2 noites vc vai descobrir a história sobre{" "}
           <em className="not-italic" style={{ color: "var(--blood)" }}>a queda de Lúcifer</em>{" "}
           que quase ninguém sabe direito. Ela tá toda na Bíblia, mas por que vc nunca ouviu?
@@ -144,7 +144,7 @@ function Index() {
         </div>
 
         {/* 5. Parágrafo */}
-        <p className="mx-auto mb-[18px] max-w-sm px-[22px] text-[14px] leading-[1.45] md:mb-0 md:mt-[14px] md:px-0 md:text-[15.5px] md:leading-snug">
+        <p className="mx-5 mt-0 mb-[14px] max-w-sm text-[13px] leading-[1.4] md:mx-auto md:mb-0 md:mt-[14px] md:px-0 md:text-[15.5px] md:leading-snug">
           2 noites comigo, ao vivo, com a Bíblia na mão. Eu vou te contar a história
           da queda de Lúcifer versículo por versículo. E pra vc entender mesmo, vou
           te ensinar o mundo espiritual de um jeito que vc nunca ouviu antes. Anjo,
@@ -153,10 +153,10 @@ function Index() {
         </p>
 
         {/* 6. Botão */}
-        <div className="mx-auto max-w-sm md:mt-[28px]">
+        <div className="mx-5 max-w-sm md:mx-auto md:mt-[28px]">
           <a
             href="#inscricao"
-            className="inline-flex w-full items-center justify-center rounded-md bg-[var(--cta)] px-[22px] py-4 text-[15px] font-extrabold tracking-wide text-[var(--cta-foreground)] shadow-lg shadow-black/10 transition-transform active:scale-[0.98] md:px-[22px] md:py-6 md:text-base"
+            className="inline-flex w-full items-center justify-center rounded-md bg-[var(--cta)] px-5 py-[14px] text-[14px] font-extrabold tracking-wide text-[var(--cta-foreground)] shadow-lg shadow-black/10 transition-transform active:scale-[0.98] md:px-[22px] md:py-6 md:text-base"
           >
             QUERO GARANTIR MINHA VAGA
           </a>
