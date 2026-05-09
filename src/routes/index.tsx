@@ -7,6 +7,7 @@ import blocoDemonios from "@/assets/bloco-demonios.png";
 import blocoLucifer from "@/assets/bloco-lucifer.png";
 import blocoTronos from "@/assets/bloco-tronos.png";
 import blocoSerafins from "@/assets/bloco-serafins.png";
+import tarcisioFoto from "@/assets/tarcisio.jpg";
 import {
   Calendar,
   Clock,
@@ -32,7 +33,10 @@ export const Route = createFileRoute("/")({
 });
 
 const ctaBtn =
-  "inline-flex w-full items-center justify-center rounded-md bg-[var(--cta)] px-5 py-4 text-base font-extrabold tracking-wide text-[var(--cta-foreground)] shadow-lg shadow-black/10 transition-transform active:scale-[0.98]";
+  "cta-premium inline-flex w-full items-center justify-center rounded-md px-5 py-4 text-base font-extrabold tracking-wide text-[var(--cta-foreground)] transition-transform";
+
+const ctaBtnSmall =
+  "cta-premium inline-flex w-full items-center justify-center rounded-md px-5 py-[14px] text-[14px] font-extrabold tracking-wide text-[var(--cta-foreground)] transition-transform md:px-[22px] md:py-6 md:text-base";
 
 function HighlightOrange({ children }: { children: React.ReactNode }) {
   return (
@@ -70,7 +74,7 @@ function StickyVagas() {
         VAGAS DESTE LOTE JÁ VENDIDAS:
       </p>
       <div className="mt-1 h-2.5 w-full overflow-hidden rounded-full bg-white/40 md:h-3">
-        <div className="flex h-full w-[87%] items-center justify-end rounded-full bg-black/70 pr-2">
+        <div className="progress-fill flex h-full w-[87%] items-center justify-end rounded-full bg-black/70 pr-2">
           <span className="text-[10px] font-bold italic text-white">87%</span>
         </div>
       </div>
@@ -89,7 +93,7 @@ function Index() {
             alt="A queda de Lúcifer — anjo caindo dos céus"
             width={1920}
             height={1080}
-            className="hero-image-img mx-auto block h-[280px] max-h-[280px] w-full object-cover md:h-[50vh] md:min-h-[360px] md:max-h-[480px]"
+            className="hero-image-img hero-image-anim mx-auto block h-[280px] max-h-[280px] w-full object-cover md:h-[50vh] md:min-h-[360px] md:max-h-[480px]"
             style={{ objectPosition: "center 30%" }}
           />
           {/* fade pra cream */}
@@ -105,7 +109,7 @@ function Index() {
 
       <section className="hero-copy relative z-0 px-5 text-center">
         {/* 1. Logo sobreposto */}
-        <header className="brand brand-hero relative px-5 text-center md:-mt-[70px] md:mb-0">
+        <header className="brand brand-hero hero-anim-1 relative px-5 text-center md:-mt-[70px] md:mb-0">
           <img
             src={luciferLogo}
             alt="A Queda de Lúcifer — Imersão Bíblica"
@@ -115,7 +119,7 @@ function Index() {
         </header>
 
         {/* 2. Date box */}
-        <div className="hero-date-box mx-auto flex max-w-sm items-center justify-center gap-3 rounded-md border border-border bg-card px-[14px] py-[10px] text-[13px] font-semibold md:my-5 md:px-[18px] md:py-4 md:text-sm">
+        <div className="hero-date-box hero-anim-2 mx-auto flex max-w-sm items-center justify-center gap-3 rounded-md border border-border bg-card px-[14px] py-[10px] text-[13px] font-semibold md:my-5 md:px-[18px] md:py-4 md:text-sm">
           <span className="inline-flex items-center gap-1.5">
             <Calendar className="h-4 w-4 text-primary" /> 26 e 27 de Maio
           </span>
@@ -126,34 +130,34 @@ function Index() {
         </div>
 
         {/* 3. Headline */}
-        <h1 className="hero-headline mx-auto max-w-sm md:mb-6 md:mt-5 md:text-[2rem] md:leading-[1.18]">
+        <h1 className="hero-headline hero-anim-3 mx-auto max-w-sm md:mb-6 md:mt-5 md:text-[2rem] md:leading-[1.18]">
           Em 2 noites você vai descobrir tudo o que a Bíblia diz sobre{" "}
           <em style={{ color: "var(--ember)" }}>a queda de Lúcifer</em>{" "}
           e sobre o mundo espiritual.
         </h1>
 
         {/* 4. Lead grifado */}
-        <p className="hero-lead-grifado">
+        <p className="hero-lead-grifado hero-anim-4">
           Aprenda ao vivo e online sobre a história da queda de Lúcifer
         </p>
 
         {/* 5. Lead normal */}
-        <p className="hero-lead-normal mx-auto max-w-sm md:text-[15.5px] md:leading-snug">
+        <p className="hero-lead-normal hero-anim-5 mx-auto max-w-sm md:text-[15.5px] md:leading-snug">
           versículo por versículo. Entenda sobre o mundo espiritual e sobre o que realmente a bíblia diz sobre isso.
         </p>
 
         {/* 6. Botão */}
-        <div className="mx-5 max-w-sm md:mx-auto md:mt-[28px]">
+        <div className="hero-anim-6 mx-5 max-w-sm md:mx-auto md:mt-[28px]">
           <a
             href="#inscricao"
-            className="inline-flex w-full items-center justify-center rounded-md bg-[var(--cta)] px-5 py-[14px] text-[14px] font-extrabold tracking-wide text-[var(--cta-foreground)] shadow-lg shadow-black/10 transition-transform active:scale-[0.98] md:px-[22px] md:py-6 md:text-base"
+            className={ctaBtnSmall}
           >
             QUERO GARANTIR MINHA VAGA
           </a>
         </div>
 
         {/* 7. Checks */}
-        <ul className="mx-auto mt-[20px] max-w-sm space-y-[5px] rounded-xl p-[18px] text-left text-[14px] font-bold md:mt-[32px] md:space-y-2 md:p-[26px] md:text-sm">
+        <ul className="hero-anim-7 mx-auto mt-[20px] max-w-sm space-y-[5px] rounded-xl p-[18px] text-left text-[14px] font-bold md:mt-[32px] md:space-y-2 md:p-[26px] md:text-sm">
           {[
             "2 noites ao vivo, comigo, com a Bíblia na mão",
             "Vc vai SABER quem é Lúcifer e como ele caiu pelo texto bíblico",
@@ -330,12 +334,12 @@ function Index() {
               key={n}
               className="rounded-2xl border border-primary/30 bg-black/30 p-5"
             >
-              <div className="flex h-44 items-center justify-center rounded-xl bg-gradient-to-br from-primary/10 to-transparent overflow-hidden">
+              <div className="flex h-44 items-center justify-center rounded-xl overflow-hidden">
                 <img
                   src={img}
                   alt={alt}
-                  className="h-40 w-auto object-contain"
-                  style={{ filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.4))" }}
+                  className="bloco-img-anim h-40 w-auto object-contain"
+                  style={{ filter: "drop-shadow(0 6px 18px rgba(184, 149, 106, 0.25))" }}
                 />
               </div>
               <p className="mt-4 text-xs font-bold italic tracking-wider text-primary">
@@ -389,7 +393,7 @@ function Index() {
                 key={l}
                 className="rounded-2xl border border-primary/30 bg-gradient-to-b from-primary/15 to-transparent p-5 text-center"
               >
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-black/30 overflow-hidden">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center overflow-hidden">
                   <img
                     src={img}
                     alt={alt}
@@ -529,7 +533,10 @@ function Index() {
               src={luciferLogoDark}
               alt="A Queda de Lúcifer — Imersão Bíblica"
               className="brand-logo offer-logo mx-auto mb-6 block h-auto w-full max-w-[320px] md:max-w-[420px]"
-              style={{ background: "transparent" }}
+              style={{
+                background: "transparent",
+                filter: "drop-shadow(0 8px 32px rgba(184, 149, 106, 0.4))"
+              }}
             />
           </header>
 
@@ -616,7 +623,11 @@ function Index() {
                 @tarcisio
               </span>
             </div>
-            <div className="h-20 w-20 flex-shrink-0 rounded-full border-2 border-primary/40 bg-muted" />
+            <img
+              src={tarcisioFoto}
+              alt="Tarcísio Salomão"
+              className="h-20 w-20 flex-shrink-0 rounded-full border-2 border-primary/40 object-cover"
+            />
           </div>
           <hr className="my-5 border-border" />
           <div className="space-y-4 text-sm leading-relaxed">
