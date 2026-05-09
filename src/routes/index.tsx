@@ -62,11 +62,11 @@ function MarqueeBar() {
 
 function StickyVagas() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 bg-primary px-4 py-2 text-primary-foreground">
-      <p className="text-center text-[11px] font-bold tracking-wide">
+    <div className="fixed inset-x-0 bottom-0 z-50 bg-primary px-4 py-2 text-primary-foreground md:px-[18px] md:py-3">
+      <p className="text-center text-[11px] font-bold tracking-wide md:text-xs">
         VAGAS DESTE LOTE JÁ VENDIDAS:
       </p>
-      <div className="mt-1 h-3 w-full overflow-hidden rounded-full bg-white/40">
+      <div className="mt-1 h-2.5 w-full overflow-hidden rounded-full bg-white/40 md:h-3">
         <div className="flex h-full w-[87%] items-center justify-end rounded-full bg-[var(--dark-section)] pr-2">
           <span className="text-[10px] font-bold italic text-white">87%</span>
         </div>
