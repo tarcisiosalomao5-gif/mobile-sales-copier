@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-claude.jpg";
+import heroImg from "@/assets/hero-lucifer.png";
 import luciferLogo from "@/assets/lucifer-logo.png";
 import {
   Calendar,
@@ -88,11 +88,11 @@ function Index() {
         <div className="relative">
           <img
             src={heroImg}
-            alt="Missão Claude Code"
-            width={1024}
-            height={1024}
-            className="mx-auto block h-[42vh] min-h-[320px] max-h-[380px] w-full object-cover object-top md:h-[80vh] md:min-h-[580px] md:max-h-none"
-            style={{ objectPosition: "50% 18%" }}
+            alt="A queda de Lúcifer — anjo caindo dos céus"
+            width={1920}
+            height={1080}
+            className="hero-image-img mx-auto block h-[38vh] min-h-[280px] max-h-[340px] w-full object-cover md:h-[50vh] md:min-h-[360px] md:max-h-[480px]"
+            style={{ objectPosition: "center center" }}
           />
           {/* fade pra cream */}
           <div
@@ -108,7 +108,7 @@ function Index() {
       <section className="hero-copy relative z-0 px-5 text-center">
         {/* 1. Logo sobreposto */}
         <header
-          className="brand relative z-10 -mt-[50px] px-5 text-center md:-mt-[70px]"
+          className="brand relative z-10 -mt-[40px] px-5 py-[10px] text-center md:-mt-[70px]"
         >
           <img
             src={luciferLogo}
