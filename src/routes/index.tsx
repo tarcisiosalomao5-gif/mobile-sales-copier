@@ -132,7 +132,7 @@ function Index() {
         {/* 3. Headline */}
         <h1 className="hero-headline hero-anim-3 mx-auto max-w-sm md:mb-6 md:mt-5 md:text-[2rem] md:leading-[1.18]">
           Em 2 noites você vai descobrir tudo o que a Bíblia diz sobre{" "}
-          <em className="not-italic font-extrabold" style={{ color: "var(--blood)" }}>a queda de Lúcifer</em>{" "}
+          <span className="hero-lead-mark">a queda de Lúcifer</span>{" "}
           e sobre o mundo espiritual.
         </h1>
 
