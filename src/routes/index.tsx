@@ -7,13 +7,12 @@ import {
   X,
   Sparkles,
   Users,
-  Cloud,
-  Code2,
-  MessageSquare,
-  Bot,
-  Search,
-  Brain,
-  Network,
+  Crown,
+  Flame,
+  BookOpen,
+  Swords,
+  ScrollText,
+  Eye,
   HelpCircle,
 } from "lucide-react";
 import { useState } from "react";
@@ -23,11 +22,11 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Missão Claude Code — 1 Dia para construir Times de I.A" },
+      { title: "Imersão A Queda de Lúcifer — 2 noites de estudo bíblico ao vivo" },
       {
         name: "description",
         content:
-          "Aprenda ao vivo, em 1 sábado, a montar squads de agentes autônomos com Claude Code que executam tarefas e liberam o seu tempo.",
+          "2 noites comigo, ao vivo, com a Bíblia na mão. A história da queda de Lúcifer versículo por versículo, do jeito que está escrito.",
       },
     ],
   }),
@@ -45,9 +44,9 @@ function HighlightOrange({ children }: { children: React.ReactNode }) {
 }
 
 function MarqueeBar() {
-  const item = "MISSÃO CLAUDE CODE";
+  const item = "IMERSÃO • A QUEDA DE LÚCIFER";
   return (
-    <div className="overflow-hidden bg-primary py-3 text-primary-foreground">
+    <div className="overflow-hidden py-3 text-white" style={{ background: "var(--flame)" }}>
       <div className="flex animate-[marquee_18s_linear_infinite] whitespace-nowrap">
         {Array.from({ length: 8 }).map((_, i) => (
           <span
@@ -64,12 +63,15 @@ function MarqueeBar() {
 
 function StickyVagas() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 bg-primary px-4 py-2 text-primary-foreground md:px-[18px] md:py-3">
+    <div
+      className="fixed inset-x-0 bottom-0 z-50 px-4 py-2 text-white md:px-[18px] md:py-3"
+      style={{ background: "var(--blood)" }}
+    >
       <p className="text-center text-[11px] font-bold tracking-wide md:text-xs">
         VAGAS DESTE LOTE JÁ VENDIDAS:
       </p>
       <div className="mt-1 h-2.5 w-full overflow-hidden rounded-full bg-white/40 md:h-3">
-        <div className="flex h-full w-[87%] items-center justify-end rounded-full bg-[var(--dark-section)] pr-2">
+        <div className="flex h-full w-[87%] items-center justify-end rounded-full bg-black/70 pr-2">
           <span className="text-[10px] font-bold italic text-white">87%</span>
         </div>
       </div>
