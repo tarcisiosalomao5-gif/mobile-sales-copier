@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-lucifer.png";
 import luciferLogo from "@/assets/lucifer-logo.png";
-import luciferLogoDark from "@/assets/lucifer-logo-dark.png";
 import blocoQuerubins from "@/assets/bloco-querubins.png";
 import blocoDemonios from "@/assets/bloco-demonios.png";
 import blocoLucifer from "@/assets/bloco-lucifer.png";
@@ -132,18 +131,18 @@ function Index() {
         {/* 3. Headline */}
         <h1 className="hero-headline hero-anim-3 mx-auto max-w-sm md:mb-6 md:mt-5 md:text-[2rem] md:leading-[1.18]">
           Em 2 noites você vai descobrir tudo o que a Bíblia diz sobre{" "}
-          <em style={{ color: "var(--ember)" }}>a queda de Lúcifer</em>{" "}
+          <em className="not-italic font-extrabold" style={{ color: "var(--blood)" }}>a queda de Lúcifer</em>{" "}
           e sobre o mundo espiritual.
         </h1>
 
         {/* 4. Lead grifado */}
         <p className="hero-lead-grifado hero-anim-4">
-          Aprenda ao vivo e online sobre a história da queda de Lúcifer
+          Aprenda ao vivo sobre a queda de Lúcifer
         </p>
 
         {/* 5. Lead normal */}
         <p className="hero-lead-normal hero-anim-5 mx-auto max-w-sm md:text-[15.5px] md:leading-snug">
-          versículo por versículo. Entenda sobre o mundo espiritual e sobre o que realmente a bíblia diz sobre isso.
+          versículo por versículo. Entenda sobre o mundo espiritual e sobre o que realmente a Bíblia diz sobre isso.
         </p>
 
         {/* 6. Botão */}
@@ -160,8 +159,8 @@ function Index() {
         <ul className="hero-anim-7 mx-auto mt-[20px] max-w-sm space-y-[5px] rounded-xl p-[18px] text-left text-[14px] font-bold md:mt-[32px] md:space-y-2 md:p-[26px] md:text-sm">
           {[
             "2 noites ao vivo, comigo, com a Bíblia na mão",
-            "Vc vai SABER quem é Lúcifer e como ele caiu pelo texto bíblico",
-            "Conhecimento que vc passa pros seus filhos, pra sua igreja, pro seu grupo",
+            "Você vai saber quem é Lúcifer e como foi sua queda segundo a Bíblia",
+            "Conhecimento que você passa pros seus filhos, pra sua igreja, pro seu grupo",
           ].map((t) => (
             <li key={t} className="flex items-start gap-2">
               <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" strokeWidth={3} />
@@ -173,19 +172,19 @@ function Index() {
 
       {/* VIRADA DE CHAVE */}
       <section className="px-5 pt-14 text-center">
-        <span className="inline-block rounded-full border border-primary/60 px-5 py-2 text-xs font-bold italic text-primary">
-          A virada de chave
+        <span className="badge-3d-light">
+          POR QUE EU PRECISO APRENDER SOBRE ISSO?
         </span>
         <h2 className="sec-h2 mx-auto mt-6 max-w-sm text-[26px] font-extrabold leading-tight">
           Tem coisa sobre Lúcifer na Bíblia que{" "}
           <em className="not-italic" style={{ color: "var(--blood)" }}>
-            vc nunca ouviu na sua igreja inteira.
+            você nunca ouviu na sua igreja inteira.
           </em>
         </h2>
         <p className="mx-auto mt-5 max-w-sm text-left text-[14px] leading-relaxed">
-          Vc já ouviu mil coisas sobre Lúcifer. Que ele era anjo. Que ele caiu. Que
+          Você já ouviu mil coisas sobre Lúcifer. Que ele era anjo. Que ele caiu. Que
           ele virou Satanás. Que ele queria ser igual a Deus. Só que olha que loucura:
-          muita coisa que vc ouviu sobre ele{" "}
+          muita coisa que você ouviu sobre ele{" "}
           <strong>não tá em lugar nenhum da Bíblia.</strong> Tá em filme. Tá em série.
           Tá em vídeo de TikTok. Tá na boca de pastor que fala mais o que ele ACHA do
           que o que tá escrito.
@@ -201,10 +200,10 @@ function Index() {
 
         <p className="mx-auto mt-6 max-w-sm text-left text-[14px] leading-relaxed">
           E o pior. O que tá DE FATO escrito na Bíblia sobre ele é mil vezes mais doido
-          do que qualquer filme que vc já viu. Tem capítulo inteiro de Isaías que quase
-          ninguém estuda direito. Tem Ezequiel 28 que vc provavelmente nunca leu com
+          do que qualquer filme que você já viu. Tem capítulo inteiro de Isaías que quase
+          ninguém estuda direito. Tem Ezequiel 28 que você provavelmente nunca leu com
           atenção. Tem Apocalipse 12 que é absurdo de profundo. E ninguém te leva por
-          isso. Ninguém senta com vc, abre o texto e te explica versículo por versículo.
+          isso. Ninguém senta com você, abre o texto e te explica versículo por versículo.
         </p>
 
         <div className="mx-auto mt-8 max-w-sm space-y-2">
@@ -217,7 +216,7 @@ function Index() {
         </div>
 
         <h3 className="sec-h2 mx-auto mt-8 max-w-sm text-[22px] font-extrabold leading-tight">
-          E se vc pudesse entender tudo isso em{" "}
+          E se você pudesse entender tudo isso em{" "}
           <em className="not-italic" style={{ color: "var(--blood)" }}>2 noites?</em>
         </h3>
       </section>
@@ -233,7 +232,7 @@ function Index() {
           </div>
           <ul className="space-y-3 text-sm font-bold">
             {[
-              "Vc ouve falar de Lúcifer mas não sabe a história dele de verdade",
+              "Você ouve falar de Lúcifer mas não sabe a história dele de verdade",
               "Mistura o que tá na Bíblia com o que tá em filme",
               "Tem mais medo de Satanás do que confiança em Deus",
               "Engole pregação que mais inventa do que prega",
@@ -255,12 +254,12 @@ function Index() {
           </div>
           <ul className="space-y-3 text-sm font-bold">
             {[
-              "Vc SABE quem é Lúcifer e como ele caiu pelo texto bíblico",
+              "Você SABE quem é Lúcifer e como ele caiu pelo texto bíblico",
               "A queda versículo por versículo (Isaías 14, Ezequiel 28, Apocalipse 12)",
               "O mundo espiritual mapeado: anjo, querubim, serafim, trono, principado",
               "Filtro pra distinguir pregação séria de espiritualismo barato",
               "Vê filme/série e SABE o que é Bíblia e o que é invenção",
-              "Conhecimento que vc passa pros seus filhos, pra sua igreja, pra sua família",
+              "Conhecimento que você passa pros seus filhos, pra sua igreja, pra sua família",
             ].map((t) => (
               <li key={t} className="flex items-start gap-3">
                 <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" strokeWidth={3} />
@@ -280,8 +279,8 @@ function Index() {
       {/* DARK — 4 BLOCOS */}
       <section className="mt-12 bg-[var(--dark-section)] px-5 py-12 text-[var(--dark-section-foreground)]">
         <div className="text-center">
-          <span className="inline-block rounded-full border border-primary/60 px-5 py-2 text-xs font-bold italic text-primary">
-            O que vamos estudar
+          <span className="badge-3d-dark">
+            O QUE VAMOS ESTUDAR
           </span>
           <h2 className="sec-h2 mt-6 text-3xl font-extrabold leading-tight">
             Os 4 blocos da
@@ -289,9 +288,9 @@ function Index() {
             <em className="not-italic text-primary">Imersão na Prática.</em>
           </h2>
           <p className="mx-auto mt-5 max-w-sm text-sm leading-relaxed">
-            Nada de conteúdo solto. Vc vai sair das 2 noites com a Bíblia na mão
+            Nada de conteúdo solto. Você vai sair das 2 noites com a Bíblia na mão
             entendendo o mundo espiritual e a queda de Lúcifer do jeito que tá escrito.
-            Da estrutura do céu até a guerra que vc trava todo dia sem nem saber.
+            Da estrutura do céu até a guerra que você trava todo dia sem nem saber.
           </p>
         </div>
 
@@ -302,7 +301,7 @@ function Index() {
               t: "Anjos, querubins, serafins e tronos.",
               img: blocoQuerubins,
               alt: "Querubim com quatro faces — hierarquia angelical",
-              d: "Antes da queda, vc precisa entender o céu. Quem é anjo, quem é querubim, quem é serafim, quem é trono. Como a Bíblia descreve cada um. E pq isso muda TUDO o que vc pensa que sabe.",
+              d: "Antes da queda, você precisa entender o céu. Quem é anjo, quem é querubim, quem é serafim, quem é trono. Como a Bíblia descreve cada um. E pq isso muda TUDO o que você pensa que sabe.",
               refs: "Is 6 · Ez 1 · Ap 4–5",
             },
             {
@@ -377,8 +376,8 @@ function Index() {
             <em className="not-italic text-primary">de uma vez por todas.</em>
           </h2>
           <p className="mx-auto mt-4 max-w-xs text-sm">
-            Os termos bíblicos que vc vai estudar durante a imersão. E que
-            provavelmente vc NUNCA estudou com profundidade.
+            Os termos bíblicos que você vai estudar durante a imersão. E que
+            provavelmente você NUNCA estudou com profundidade.
           </p>
           <div className="mx-auto mt-8 grid max-w-xs grid-cols-2 gap-4">
             {[
@@ -421,35 +420,35 @@ function Index() {
 
       {/* PARA QUEM É */}
       <section className="px-5 pt-12 text-center">
-        <span className="inline-block rounded-full border border-primary/60 px-5 py-2 text-xs font-bold italic">
-          Para quem é
+        <span className="badge-3d-light">
+          PARA QUEM É
         </span>
         <h2 className="sec-h2 mt-6 text-3xl font-extrabold leading-tight">
           Essa imersão é{" "}
-          <em className="not-italic text-primary">pra vc</em> se:
+          <em className="not-italic text-primary">pra você</em> se:
         </h2>
 
         <div className="mt-8 space-y-4 text-left">
           {[
             {
               n: "01",
-              t: "✓ Vc lê a Bíblia e quer ir além",
+              t: "✓ Você lê a Bíblia e quer ir além",
               d: "A meta não é só conhecer mais histórias. É finalmente entender o mundo espiritual com profundidade. O que tá escrito de verdade sobre o invisível. Sem espiritualismo, sem ficção, sem opinião disfarçada de revelação.",
             },
             {
               n: "02",
-              t: "✓ Vc é líder ou dá aula na igreja",
+              t: "✓ Você é líder ou dá aula na igreja",
               d: "A meta não é só repassar conteúdo. É ter base bíblica de verdade pra ensinar com autoridade sobre anjo, demônio e a queda de Lúcifer. Versículo na mão. Sem ter que improvisar quando alguém pergunta.",
             },
             {
               n: "03",
-              t: "✓ Vc tem filhos e quer proteger eles",
+              t: "✓ Você tem filhos e quer proteger eles",
               d: "A meta não é só evitar que eles vejam coisa errada. É dar pros seus filhos uma base bíblica clara sobre o invisível, num mundo que mistura tudo e não explica nada direito.",
             },
             {
               n: "04",
-              t: "✓ Vc estuda a Bíblia sozinho e trava",
-              d: "A meta não é só ler mais. É ter clareza nos temas que parecem confusos quando vc abre Isaías, Ezequiel ou Apocalipse e fica sem direção. Esses 3 livros principalmente.",
+              t: "✓ Você estuda a Bíblia sozinho e trava",
+              d: "A meta não é só ler mais. É ter clareza nos temas que parecem confusos quando você abre Isaías, Ezequiel ou Apocalipse e fica sem direção. Esses 3 livros principalmente.",
             },
           ].map((b) => (
             <div
@@ -470,7 +469,7 @@ function Index() {
         {/* DARK closing card */}
         <div className="mt-8 rounded-2xl bg-[var(--dark-section)] p-6 text-left text-white">
           <h3 className="sec-h2 text-xl font-extrabold leading-tight">
-            Vc ouve pregação mas nunca{" "}
+            Você ouve pregação mas nunca{" "}
             <em className="not-italic" style={{ color: "var(--ember-soft)" }}>
               estudou de verdade
             </em>{" "}
@@ -481,7 +480,7 @@ function Index() {
           </p>
           <p className="mt-4 text-sm leading-relaxed text-white/85">
             É parar de engolir achismo. É usar 2 noites pra mudar de posição de vez.
-            Vc não tem 5 horas pra eu te mostrar o que a Bíblia ensina de verdade
+            Você não tem 5 horas pra eu te mostrar o que a Bíblia ensina de verdade
             sobre o invisível e a queda de Lúcifer?
           </p>
         </div>
@@ -501,15 +500,15 @@ function Index() {
           </p>
           <h2 className="sec-h2 mt-2 text-lg font-extrabold">
             Essa imersão{" "}
-            <em className="not-italic" style={{ color: "var(--blood)" }}>não é pra vc</em> se:
+            <em className="not-italic" style={{ color: "var(--blood)" }}>não é pra você</em> se:
           </h2>
           <ul className="mt-5 space-y-3 text-sm">
             {[
-              "Vc quer assistir sem abrir a Bíblia junto",
-              "Vc espera ouvir confirmação de achismo",
-              "Vc quer experiência mística sem texto bíblico",
-              "Vc não quer ler versículo",
-              "Vc acredita só no que sentiu",
+              "Você quer assistir sem abrir a Bíblia junto",
+              "Você espera ouvir confirmação de achismo",
+              "Você quer experiência mística sem texto bíblico",
+              "Você não quer ler versículo",
+              "Você acredita só no que sentiu",
             ].map((t) => (
               <li key={t} className="flex items-start gap-3">
                 <X className="mt-0.5 h-5 w-5 flex-shrink-0" strokeWidth={3} style={{ color: "var(--blood)" }} />
@@ -530,18 +529,20 @@ function Index() {
         <div className="text-center">
           <header className="offer-brand mb-7 px-5 text-center">
             <img
-              src={luciferLogoDark}
+              src={luciferLogo}
               alt="A Queda de Lúcifer — Imersão Bíblica"
               className="brand-logo offer-logo mx-auto mb-6 block h-auto w-full max-w-[320px] md:max-w-[420px]"
               style={{
                 background: "transparent",
-                filter: "drop-shadow(0 8px 32px rgba(184, 149, 106, 0.4))"
+                filter: "drop-shadow(0 0 30px rgba(255, 255, 255, 0.45)) drop-shadow(0 0 60px rgba(255, 255, 255, 0.25)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4))"
               }}
             />
           </header>
 
-          <div className="mx-auto mt-6 inline-block rounded-full border border-primary/60 px-6 py-2 text-sm font-bold italic text-primary">
-            LOTE COM VALOR PROMOCIONAL
+          <div className="mx-auto mt-6 inline-block">
+            <span className="badge-3d-dark">
+              LOTE COM VALOR PROMOCIONAL
+            </span>
           </div>
 
           <ul className="mx-auto mt-6 max-w-xs space-y-3 text-left text-sm font-bold italic">
@@ -609,8 +610,10 @@ function Index() {
 
       {/* QUEM CONDUZ */}
       <section className="px-5 pt-12">
-        <div className="mx-auto max-w-sm rounded-full border border-primary/60 px-6 py-3 text-center text-xs font-bold italic">
-          QUEM VAI CONDUZIR A IMERSÃO
+        <div className="mx-auto max-w-sm text-center">
+          <span className="badge-3d-light">
+            QUEM VAI CONDUZIR A IMERSÃO
+          </span>
         </div>
 
         <div className="mt-8 rounded-2xl border-2 border-primary/40 bg-card p-6">
