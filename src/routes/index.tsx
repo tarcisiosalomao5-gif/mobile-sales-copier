@@ -91,8 +91,8 @@ function Index() {
             alt="A queda de Lúcifer — anjo caindo dos céus"
             width={1920}
             height={1080}
-            className="hero-image-img mx-auto block h-[34vh] max-h-[290px] w-full object-cover md:h-[50vh] md:min-h-[360px] md:max-h-[480px]"
-            style={{ objectPosition: "center top" }}
+            className="hero-image-img mx-auto block h-[280px] max-h-[280px] w-full object-cover md:h-[50vh] md:min-h-[360px] md:max-h-[480px]"
+            style={{ objectPosition: "center 30%" }}
           />
           {/* fade pra cream */}
           <div
@@ -107,19 +107,17 @@ function Index() {
 
       <section className="hero-copy relative z-0 px-5 text-center">
         {/* 1. Logo sobreposto */}
-        <header
-          className="brand relative z-50 -mt-[70px] mb-0 px-5 text-center md:-mt-[70px] md:mb-0"
-        >
+        <header className="brand brand-hero relative px-5 text-center md:-mt-[70px] md:mb-0">
           <img
             src={luciferLogo}
             alt="A Queda de Lúcifer — Imersão Bíblica"
-            className="brand-logo mx-auto block h-auto w-full max-w-[360px] md:max-w-[460px]"
+            className="brand-logo mx-auto block h-auto w-full md:max-w-[460px]"
             style={{ background: "transparent" }}
           />
         </header>
 
         {/* 2. Date box */}
-        <div className="mx-auto -mt-2 mb-[14px] flex max-w-sm items-center justify-center gap-3 rounded-md border border-border bg-card px-[14px] py-[10px] text-[13px] font-semibold md:my-5 md:px-[18px] md:py-4 md:text-sm">
+        <div className="hero-date-box mx-auto flex max-w-sm items-center justify-center gap-3 rounded-md border border-border bg-card px-[14px] py-[10px] text-[13px] font-semibold md:my-5 md:px-[18px] md:py-4 md:text-sm">
           <span className="inline-flex items-center gap-1.5">
             <Calendar className="h-4 w-4 text-primary" /> 2 noites ao vivo
           </span>
@@ -130,17 +128,19 @@ function Index() {
         </div>
 
         {/* 3. Headline */}
-        <h1 className="mx-5 mt-0 mb-[14px] max-w-sm text-[22px] font-black leading-[1.18] tracking-tight md:mx-auto md:mb-6 md:mt-5 md:px-0 md:text-[2rem] md:leading-[1.18]" style={{ fontFamily: '"Manrope", system-ui, sans-serif' }}>
+        <h1 className="hero-headline mx-auto max-w-sm md:mb-6 md:mt-5 md:text-[2rem] md:leading-[1.18]">
           Em 2 noites você vai descobrir tudo o que a Bíblia diz sobre{" "}
-          <em className="not-italic" style={{ color: "var(--blood)" }}>a queda de Lúcifer</em>{" "}
+          <em style={{ color: "var(--ember)" }}>a queda de Lúcifer</em>{" "}
           e sobre o mundo espiritual.
         </h1>
 
-        {/* 4. Parágrafo (com grifo) */}
-        <p className="mx-5 mt-0 mb-[16px] max-w-sm text-[13px] leading-[1.5] md:mx-auto md:mb-0 md:mt-[14px] md:px-0 md:text-[15.5px] md:leading-snug">
-          <span className="font-bold text-white box-decoration-clone px-[6px] py-[2px]" style={{ background: "var(--flame)" }}>
-            Aprenda ao vivo e online sobre a história da queda de Lúcifer
-          </span>{" "}
+        {/* 4. Lead grifado */}
+        <p className="hero-lead-grifado">
+          Aprenda ao vivo e online sobre a história da queda de Lúcifer
+        </p>
+
+        {/* 5. Lead normal */}
+        <p className="hero-lead-normal mx-auto max-w-sm md:text-[15.5px] md:leading-snug">
           versículo por versículo. Entenda sobre o mundo espiritual e sobre o que realmente a bíblia diz sobre isso.
         </p>
 
